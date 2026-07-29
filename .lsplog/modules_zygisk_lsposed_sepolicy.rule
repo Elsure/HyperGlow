@@ -1,5 +1,0 @@
-type lsposed_file file_type
-typeattribute lsposed_file mlstrustedobject
-allow domain lsposed_file dir *
-allow domain lsposed_file file *
-allow system_server apk_data_file file execute

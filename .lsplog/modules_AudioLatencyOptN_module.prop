@@ -1,6 +1,0 @@
-id=AudioLatencyOptN
-name=HyperOS音频延迟优化 OS3.3 Xiaomi Pad8 Pro
-version=26.6.2
-versionCode=260602
-author=Kudryavka
-description=允许所有APP创建ULL通路，AAUDIO

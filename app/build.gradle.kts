@@ -4,34 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.miuilight"
+    namespace = "com.elsure.hyperglow"
     compileSdk {
         version = release(37)
     }
 
-    signingConfigs {
-        create("release") {
-            // 如果存在密钥库文件则使用，优先从环境变量读取配置
-            val keystoreFile = rootProject.file("release.keystore")
-            if (keystoreFile.exists()) {
-                storeFile = keystoreFile
-                storePassword = System.getenv("KEYSTORE_PASSWORD")
-                keyAlias = System.getenv("KEY_ALIAS")
-                keyPassword = System.getenv("KEY_PASSWORD")
-            }
-        }
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false // 或按需开启
-            // 引用上面的 release 签名配置
-            signingConfig = signingConfigs.getByName("release")
-        }
-    }
-
     defaultConfig {
-        applicationId = "com.example.miuilight"
+        applicationId = "com.elsure.hyperglow"
         minSdk = 35
         targetSdk = 36
         versionCode = 1
@@ -40,6 +19,16 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildTypes {
+        release {
+            // R8 on. The Xposed entry class is loaded BY NAME from assets/xposed_init, so the keep
+            // rules in src/main/keepRules/rules.keep are what stop it being renamed or stripped —
+            // if that ever breaks, the module installs fine but silently never hooks anything.
+            optimization {
+                enable = true
+            }
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -57,11 +46,15 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.miuix)
+    implementation(libs.miuix.preference)
+    implementation(libs.androidx.compose.material.icons.core)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)

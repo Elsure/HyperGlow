@@ -1,9 +1,0 @@
-id=zygisk_lsposed
-name=LSPosed IT (GitHub@Elsure)
-version=v2.1.0-it (7784)
-versionCode=7784
-author=LSPosed Developers
-description=Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 17. Requires Zygisk enabled.
-updateJson=https://bot.lsposed.org/update/8453173291529559738/zygisk.json
-actionIcon=launcher.png
-validated=98451769

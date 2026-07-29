@@ -26,30 +26,22 @@ jobs:
           cache: gradle
       - name: Make Gradle executable
         run: chmod +x ./gradlew
-
       - name: Decode signing keystore (if provided)
-        run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > release.keystore
-
-      # 直接执行构建，并将 Secrets 传给环境变量
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > release.keystore
+      - name: Inject signingConfigs into build.gradle.kts
+        run: bash .github/scripts/inject-signing.sh
       - name: Build release APK
         run: ./gradlew :app:assembleRelease --no-daemon
-        env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-
       - name: Locate APK
         id: apk
-        run: |
+        run:
           APK=$(find app/build/outputs/apk/release -name "*-release.apk" | head -n1)
           echo "apk=$APK" >> "$GITHUB_OUTPUT"
           echo "apk_name=$(basename "$APK")" >> "$GITHUB_OUTPUT"
       - name: Print APK info
-        run: |
-          ls -la "${{ steps.apk.outputs.apk }}"
+        run: ls -la "${{ steps.apk.outputs.apk }}"
       - name: Create / update GitHub Release and upload APK
-        if: github.event_name == 'workflow_dispatch' && inputs.create_release == true
+        if: github.event_name == "workflow_dispatch" && inputs.create_release == true
         uses: softprops/action-gh-release@v2
         with:
           tag_name: release-${{ github.sha }}

@@ -13,6 +13,3 @@
 .externalNativeBuild
 .cxx
 local.properties
-
-my-release.keystore
-release_keystore.b64

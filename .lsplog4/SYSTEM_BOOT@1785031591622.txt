@@ -1,8 +1,0 @@
-isPrevious: true
-Build: Xiaomi/piano/piano:16/BP2A.250605.031.A3/OS3.0.306.3.WPYCNXM:user/release-keys
-Hardware: sun
-Revision: 0
-Bootloader: unknown
-Radio: null
-Kernel: Linux version 6.6.77-android15-8-gf9a1d4bd8353-abogki440974771-4k (kleaf@build-host) (Android (11368308, +pgo, +bolt, +lto, +mlgo, based on r510928) clang version 18.0.0 (https://android.googlesource.com/toolchain/llvm-project 477610d4d0d988e69dbc3fae4fe86bff3f07f2b5), LLD 18.0.0) #1 SMP PREEMPT Fri Aug 29 01:48:34 UTC 2025
-

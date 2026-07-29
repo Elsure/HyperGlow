@@ -1,8 +1,0 @@
-id=Hyper_MagicWindow
-name=HyperOS 完美横屏应用计划
-version=pad-3.01.39.beta
-versionCode=301039
-author=做梦书、柚稚、SharpIce、YifePlayte、焕晨HChen 等(原作者:御坂初琴)
-description=[★适配应用总数:8606，仅兼容Android 16] 适用于HyperOS For Pad，用于扩展应用横屏布局、应用布局优化和游戏显示布局的支持范围并优化适配体验，支持[自定义规则]扩充或覆盖部分应用适配。当前刷入的是[小米平板安卓16通用版]。(反馈应用适配问题可前往酷安私信 @做梦书 ，模块首页:https://hyper-magic-window.sothx.com，GitHub仓库:https://github.com/sothx/mipad-magic-window，如需卸载模块请移除模块后重启平板)
-updateJson=https://hyper-magic-window-module-update.sothx.com/release/V13/pad.json
-versionType=beta
