@@ -1,0 +1,124 @@
+#!/system/bin/sh
+# miuilightd - root RGB LED enforcer for MiuiLightController (Xiaomi piano / HyperOS).
+#
+# Drives /sys/class/leds/{red,green,blue}/brightness directly as root, reading the desired
+# state from /data/adb/miuilight/state. Because it re-writes the LED every frame, it wins
+# against any system writer (camera privacy light, battery, notifications) and keeps
+# animating even when the app process is frozen in the background.
+#
+# state format (one line, comma separated):  takeover,mode,R,G,B,period_ms
+#   takeover : 1 = enforce (override the system), 0 = release (let the system control the LED)
+#   mode     : 0 = forced off, 1 = solid, 2 = breathing, 3 = blink
+#   R,G,B    : 0..255
+#   period_ms: animation period (breathing/blink), e.g. 2000
+
+DIR=/data/adb/miuilight
+STATE=$DIR/state
+PRIV=$DIR/privacy
+PIDFILE=$DIR/miuilightd.pid
+RED=/sys/class/leds/red/brightness
+GRN=/sys/class/leds/green/brightness
+BLU=/sys/class/leds/blue/brightness
+
+mkdir -p "$DIR"
+
+# survive the parent shell exiting (belt-and-suspenders alongside setsid)
+trap '' HUP
+
+# ---- single-instance guard (pidfile based; avoids pkill -f self-kill) ----
+if [ -f "$PIDFILE" ]; then
+  oldpid=$(cat "$PIDFILE" 2>/dev/null)
+  if [ -n "$oldpid" ] && [ -d "/proc/$oldpid" ]; then
+    exit 0
+  fi
+fi
+echo $$ > "$PIDFILE"
+
+# ---- raised-cosine breathing table (48 steps, 0..255) ----
+TBL=(0 1 4 10 17 26 37 50 64 79 95 111 127 144 160 176 191 205 218 229 238 245 251 254 255 254 251 245 238 229 218 205 191 176 160 144 128 111 95 79 64 50 37 26 17 10 4 1)
+N=48
+
+takeover=0; mode=0; cr=0; cg=0; cb=0; period=2000
+frame=0
+
+while :; do
+  if [ -f "$STATE" ]; then
+    line=$(cat "$STATE" 2>/dev/null)
+    if [ -n "$line" ]; then
+      IFS=, read nt nm nr ng nb np <<< "$line"
+      # accept the new state only if period parses as a number (app always writes valid CSV)
+      case "$np" in
+        ''|*[!0-9]*) : ;;
+        *)
+          takeover=$nt; mode=$nm; cr=$nr; cg=$ng; cb=$nb; period=$np
+          [ "$cr" -gt 255 ] 2>/dev/null && cr=255
+          [ "$cg" -gt 255 ] 2>/dev/null && cg=255
+          [ "$cb" -gt 255 ] 2>/dev/null && cb=255
+          [ "$period" -lt 100 ] 2>/dev/null && period=100
+          ;;
+      esac
+    fi
+  fi
+
+  if [ "$takeover" != "1" ]; then
+    # released: do not touch the LED, let the system control it
+    frame=0
+    sleep 1
+    continue
+  fi
+
+  # ---- privacy override (written by the app from the hook's privacy events) ----
+  # PRIV format: override,R,G,B  (override: 0=none 1=custom color 2=force off)
+  pov=0; pr=0; pg=0; pb=0
+  if [ -f "$PRIV" ]; then
+    pline=$(cat "$PRIV" 2>/dev/null)
+    if [ -n "$pline" ]; then
+      IFS=, read pov pr pg pb <<< "$pline"
+      case "$pov" in ''|*[!0-9]*) pov=0;; esac
+    fi
+  fi
+  if [ "$pov" = "1" ]; then
+    echo "$pr" > "$RED"; echo "$pg" > "$GRN"; echo "$pb" > "$BLU"
+    sleep 0.02
+    continue
+  elif [ "$pov" = "2" ]; then
+    echo 0 > "$RED"; echo 0 > "$GRN"; echo 0 > "$BLU"
+    sleep 0.02
+    continue
+  fi
+  case "$mode" in
+    0)
+      echo 0 > "$RED"; echo 0 > "$GRN"; echo 0 > "$BLU"
+      sleep 0.05
+      ;;
+    1)
+      echo "$cr" > "$RED"; echo "$cg" > "$GRN"; echo "$cb" > "$BLU"
+      sleep 0.02
+      ;;
+    2)
+      idx=$((frame % N))
+      f=${TBL[$idx]}
+      echo $((cr * f / 255)) > "$RED"
+      echo $((cg * f / 255)) > "$GRN"
+      echo $((cb * f / 255)) > "$BLU"
+      step=$((period / N)); [ "$step" -lt 8 ] && step=8
+      sleep "$(printf '0.%03d' "$step")"
+      frame=$((frame + 1))
+      ;;
+    3)
+      idx=$((frame % N))
+      if [ "$idx" -lt 24 ]; then
+        echo "$cr" > "$RED"; echo "$cg" > "$GRN"; echo "$cb" > "$BLU"
+      else
+        echo 0 > "$RED"; echo 0 > "$GRN"; echo 0 > "$BLU"
+      fi
+      step=$((period / N)); [ "$step" -lt 8 ] && step=8
+      sleep "$(printf '0.%03d' "$step")"
+      frame=$((frame + 1))
+      ;;
+    *)
+      echo 0 > "$RED"; echo 0 > "$GRN"; echo 0 > "$BLU"
+      sleep 0.1
+      ;;
+  esac
+done

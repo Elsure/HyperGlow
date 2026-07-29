@@ -1,0 +1,756 @@
+----part 1 start----
+[ 1970-02-23T05:22:35.928        0:  1033:  1033 F/libc            ] Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 1033 (init), pid 1033 (init)
+[ 1970-02-23T05:22:35.941        0:  1033:  1033 F/libc            ] Crash due to signal: crash_dump helper failed to exec, or was killed
+[ 1970-02-23T05:22:37.513        0:  1529:  1529 I/KernelSU        ] ksud::cli: command: PostFsData
+[ 1970-02-23T05:22:37.517        0:  1529:  1529 I/KernelSU        ] ksud::utils: safemode: false
+[ 1970-02-23T05:22:37.517        0:  1529:  1529 I/KernelSU        ] ksud::utils: kernel_safemode: false
+[ 1970-02-23T05:22:37.517        0:  1529:  1529 I/KernelSU        ] ksud::module: /data/adb/post-fs-data.d not exists, skip
+[ 1970-02-23T05:22:37.562        0:  1529:  1529 I/KernelSU        ] ksud::module: load policy: /data/adb/modules/hybrid_mount/sepolicy.rule
+[ 1970-02-23T05:22:37.583        0:  1529:  1529 I/KernelSU        ] ksud::module: load policy: /data/adb/modules/zygisksu/sepolicy.rule
+[ 1970-02-23T05:22:37.605        0:  1529:  1529 W/KernelSU        ] ksud::sepolicy: apply sepolicy batch partially succeeded: 19/21
+[ 1970-02-23T05:22:37.605        0:  1529:  1529 I/KernelSU        ] ksud::module: load policy: /data/adb/modules/tricky_store/sepolicy.rule
+[ 1970-02-23T05:22:37.626        0:  1529:  1529 I/KernelSU        ] ksud::module: load policy: /data/adb/modules/zygisk_lsposed/sepolicy.rule
+[ 1970-02-23T05:22:37.647        0:  1529:  1529 I/KernelSU        ] ksud::module: /data/adb/modules/AudioLatencyOptN is disabled, skip
+[ 1970-02-23T05:22:37.647        0:  1529:  1529 I/KernelSU        ] ksud::profile: profile sepolicy dir not exists.
+[ 1970-02-23T05:22:37.647        0:  1529:  1529 I/KernelSU        ] ksud::utils: safemode: false
+[ 1970-02-23T05:22:37.647        0:  1529:  1529 I/KernelSU        ] ksud::utils: kernel_safemode: false
+[ 1970-02-23T05:22:37.647        0:  1529:  1529 I/KernelSU        ] ksud::feature: Initializing features from config...
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Loaded 5 features from config
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::module: /data/adb/modules/AudioLatencyOptN is disabled, skip
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Applying feature configuration to kernel...
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Set feature adb_root to 0
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Set feature selinux_hide to 0
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Set feature kernel_umount to 1
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Set feature su_compat to 1
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Set feature sulog to 0
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Applied 5 features successfully
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Saved 5 features to config
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::feature: Saved feature configuration to file
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 W/KernelSU        ] ksud::init_event: KPM: Failed to start KPM watcher: Inappropriate ioctl for device (os error 25)
+[ 1970-02-23T05:22:37.648        0:  1529:  1529 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 1970-02-23T05:22:37.650        0:  1529:  1529 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 1970-02-23T05:22:37.650        0:  1529:  1529 I/KernelSU        ] ksud::module: exec /data/adb/modules/zygisksu/post-fs-data.sh
+[ 1970-02-23T05:22:37.659        0:  1546:  1546 I/zn-daemon64     ] Zygisk Next Daemon 1.4.3-817-e815170-release
+[ 1970-02-23T05:22:37.659        0:  1546:  1546 I/zn-daemon64     ] Kernel: 6.6.77-android15-8-gf9a1d4bd8353-abogki440974771-4k aarch64
+[ 1970-02-23T05:22:37.671        0:  1546:  1546 I/zn-daemon64     ] ** write prop
+[ 1970-02-23T05:22:37.692        0:  1546:  1546 I/zn-daemon64     ] ** preparing payload ...
+[ 1970-02-23T05:22:37.692        0:  1546:  1546 I/zn-daemon64     ] ** payload prepared
+[ 1970-02-23T05:22:37.692        0:  1546:  1546 I/zn-daemon64     ] ** attaching init ...
+[ 1970-02-23T05:22:37.692        0:  1546:  1546 I/zn-daemon64     ] ** init attached
+[ 1970-02-23T05:22:37.692        0:  1546:  1546 I/zn-daemon64     ] ** loading payload ...
+[ 1970-02-23T05:22:37.693        0:  1546:  1546 I/zn-daemon64     ] libpayload base: 7f8abb0000
+[ 1970-02-23T05:22:37.693        0:  1546:  1546 I/zn-daemon64     ] ** payload loaded
+[ 1970-02-23T05:22:37.693        0:  1546:  1546 I/zn-daemon64     ] ** setting up payload ...
+[ 1970-02-23T05:22:37.693        0:  1546:  1546 I/zn-daemon64     ] ** payload has been setup
+[ 1970-02-23T05:22:37.693        0:  1546:  1546 I/zn-daemon64     ] ** inline hook prepare ...
+[ 1970-02-23T05:22:37.694        0:  1546:  1546 I/zn-daemon64     ] ** hooking execve
+[ 1970-02-23T05:22:37.694        0:  1546:  1546 I/zn-daemon64     ] *** prepare trampoline
+[ 1970-02-23T05:22:37.696        0:  1546:  1546 I/zn-daemon64     ] ** inline hook commit
+[ 1970-02-23T05:22:37.696        0:  1546:  1546 I/zn-daemon64     ] execve hook installed
+[ 1970-02-23T05:22:37.696        0:  1546:  1546 I/zn-daemon64     ] ** hooking wait4
+[ 1970-02-23T05:22:37.696        0:  1546:  1546 I/zn-daemon64     ] *** prepare trampoline
+[ 1970-02-23T05:22:37.698        0:  1546:  1546 I/zn-daemon64     ] ** inline hook commit
+[ 1970-02-23T05:22:37.698        0:  1546:  1546 I/zn-daemon64     ] wait4 hook installed
+[ 1970-02-23T05:22:37.698        0:  1546:  1546 I/zn-daemon64     ] inject success!
+[ 1970-02-23T05:22:37.698        0:  1546:  1546 I/zn-daemon64     ] ** do cleanup
+[ 1970-02-23T05:22:37.698        0:  1546:  1546 I/zn-daemon64     ] ** do restore
+[ 1970-02-23T05:22:37.698        0:  1546:  1546 I/zn-daemon64     ] loading 64bit zygisk modules
+[ 1970-02-23T05:22:37.698        0:  1546:  1546 I/zn-daemon64     ] loaded 64bit zygisk module zygisk_lsposed
+[ 1970-02-23T05:22:37.699        0:  1546:  1546 I/zn-daemon64     ] loaded 1 64bit zygisk module(s)
+[ 1970-02-23T05:22:37.699        0:  1546:  1546 I/zn-daemon64     ] loading 32bit zygisk modules
+[ 1970-02-23T05:22:37.699        0:  1546:  1546 I/zn-daemon64     ] loaded 32bit zygisk module zygisk_lsposed
+[ 1970-02-23T05:22:37.699        0:  1546:  1546 I/zn-daemon64     ] loaded 1 32bit zygisk module(s)
+[ 1970-02-23T05:22:37.699        0:  1546:  1546 I/zn-daemon64     ] loading zn modules
+[ 1970-02-23T05:22:37.699        0:  1546:  1546 I/zn-daemon64     ] loaded 0 zn modules
+[ 1970-02-23T05:22:37.699        0:  1566:  1566 I/zn-daemon64     ] ** daemon launched
+[ 1970-02-23T05:22:37.699        0:  1566:  1566 I/zn-daemon64     ] ** stop klog
+[ 1970-02-23T05:22:37.699        0:  1566:  1566 I/zn-daemon64     ] ** denylist policy: 0
+[ 1970-02-23T05:22:37.700        0:  1566:  1566 I/zn-daemon64     ] ** denylist enforce mode: 2
+[ 1970-02-23T05:22:37.700        0:  1566:  1566 I/zn-daemon64     ] ** memory type: 1
+[ 1970-02-23T05:22:37.700        0:  1566:  1566 I/zn-daemon64     ] ** linker mode: 1
+[ 1970-02-23T05:22:37.700        0:  1566:  1566 I/zn-daemon64     ] ** write prop
+[ 1970-02-23T05:22:37.701        0:  1529:  1529 I/KernelSU        ] ksud::module: exec /data/adb/modules/netproxy/post-fs-data.sh
+[ 1970-02-23T05:22:37.803        0:  1529:  1529 I/KernelSU        ] ksud::module: exec /data/adb/modules/TA_enhanced/post-fs-data.sh
+[ 1970-02-23T05:22:37.810        0:  1529:  1529 I/KernelSU        ] ksud::module: exec /data/adb/modules/Hyper_MagicWindow/post-fs-data.sh
+[ 1970-02-23T05:22:37.865        0:  1529:  1529 I/KernelSU        ] ksud::module: /data/adb/modules/AudioLatencyOptN is disabled, skip
+[ 1970-02-23T05:22:37.865        0:  1529:  1529 I/KernelSU        ] ksud::module: exec /data/adb/modules/pifs_cleverestech/post-fs-data.sh
+[ 1970-02-23T05:22:38.008        0:  1529:  1529 I/KernelSU        ] ksud::module: load /data/adb/modules/Hyper_MagicWindow system.prop
+[ 1970-02-23T05:22:38.009        0:  1529:  1529 I/KernelSU        ] ksud::resetprop: Loaded system.prop from /data/adb/modules/Hyper_MagicWindow/system.prop
+[ 1970-02-23T05:22:38.009        0:  1529:  1529 I/KernelSU        ] ksud::module: /data/adb/modules/AudioLatencyOptN is disabled, skip
+[ 1970-02-23T05:22:38.009        0:  1529:  1529 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 1970-02-23T05:22:38.010        0:  1529:  1529 I/KernelSU        ] ksud::metamodule: Executing mount script for metamodule
+[ 1970-02-23T05:22:38.010        0:  1529:  1529 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 1970-02-23T05:22:38.376        0:  1751:  1751 I/KernelSU        ] ksud::cli: command: Module { command: Config { internal: None, command: Set { key: "override.description", value: Some("😋 运行中喵～ (Ext4) 💿  Kasumi:0  Overlay:0  Magic:0"), stdin: false, temp: true } } }
+[ 1970-02-23T05:22:38.382        0:  1752:  1752 I/KernelSU        ] ksud::cli: command: Kernel { command: NotifyModuleMounted }
+[ 1970-02-23T05:22:38.383        0:  1529:  1529 I/KernelSU        ] ksud::metamodule: Metamodule mount script executed successfully
+[ 1970-02-23T05:22:38.383        0:  1529:  1529 I/KernelSU        ] ksud::umount: Umount config file does not exist, skipping
+[ 1970-02-23T05:22:38.383        0:  1529:  1529 I/KernelSU        ] ksud::utils: safemode: false
+[ 1970-02-23T05:22:38.383        0:  1529:  1529 I/KernelSU        ] ksud::utils: kernel_safemode: false
+[ 1970-02-23T05:22:38.383        0:  1529:  1529 I/KernelSU        ] ksud::module: /data/adb/post-mount.d not exists, skip
+[ 1970-02-23T05:22:38.383        0:  1529:  1529 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 1970-02-23T05:22:38.384        0:  1529:  1529 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 1970-02-23T05:22:38.384        0:  1529:  1529 I/KernelSU        ] ksud::module: /data/adb/modules/AudioLatencyOptN is disabled, skip
+[ 2026-07-26T12:40:38.825        0:  1566:  1753 I/zn-daemon64     ] ** new zygote process: 1824 /system/bin/app_process64 name=zygote
+[ 2026-07-26T12:40:38.826        0:  1825:  1825 I/zn-daemon64     ] ** run zygote-injector for 1824: 1825 ./bin/zygiskd64
+[ 2026-07-26T12:40:38.829        0:  1825:  1825 I/zn-injector64   ] injecting zygote 1824 (injector 1825)
+[ 2026-07-26T12:40:39.322        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,1824,1824]Zygisk library injected, version 1.4.3-817-e815170-release,exp_hook
+[ 2026-07-26T12:40:39.322        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,1824,1824]Start hooking
+[ 2026-07-26T12:40:39.542        0:  1566:  1841 I/zn-daemon64     ] zygote 1824 hook status: 1
+[ 2026-07-26T12:40:39.542        0:  1825:  1825 I/zn-injector64   ] inject zygote 1824 succeed
+[ 2026-07-26T12:40:39.543        0:  1566:  1753 I/zn-daemon64     ] ** inject success for 1824
+[ 2026-07-26T12:40:39.544        0:  1566:  1753 I/zn-daemon64     ] ** write prop
+[ 2026-07-26T12:40:40.296        0:  2834:  2834 I/KernelSU        ] ksud::cli: command: Services
+[ 2026-07-26T12:40:40.296        0:  2834:  2834 I/KernelSU        ] ksud::init_event: on_services triggered!
+[ 2026-07-26T12:40:40.296        0:  2834:  2834 I/KernelSU        ] ksud::utils: safemode: false
+[ 2026-07-26T12:40:40.296        0:  2834:  2834 I/KernelSU        ] ksud::utils: kernel_safemode: false
+[ 2026-07-26T12:40:40.316        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/service.d/.zn_cleanup.sh
+[ 2026-07-26T12:40:40.318        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/service.d/.encore_cleanup.sh
+[ 2026-07-26T12:40:40.319        0:  2834:  2834 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 2026-07-26T12:40:40.320        0:  2834:  2834 I/KernelSU        ] ksud::metamodule: Executing metamodule service.sh
+[ 2026-07-26T12:40:40.320        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/hybrid_mount/service.sh
+[ 2026-07-26T12:40:40.321        0:  2834:  2834 I/KernelSU        ] ksud::metamodule: Metamodule service.sh executed successfully
+[ 2026-07-26T12:40:40.321        0:  2834:  2834 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 2026-07-26T12:40:40.322        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/zygisksu/service.sh
+[ 2026-07-26T12:40:40.323        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/netproxy/service.sh
+[ 2026-07-26T12:40:40.324        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/tricky_store/service.sh
+[ 2026-07-26T12:40:40.325        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/encore/service.sh
+[ 2026-07-26T12:40:40.326        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/zygisk_lsposed/service.sh
+[ 2026-07-26T12:40:40.327        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/TA_enhanced/service.sh
+[ 2026-07-26T12:40:40.328        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/Hyper_MagicWindow/service.sh
+[ 2026-07-26T12:40:40.330        0:  2834:  2834 I/KernelSU        ] ksud::module: /data/adb/modules/AudioLatencyOptN is disabled, skip
+[ 2026-07-26T12:40:40.330        0:  2834:  2834 I/KernelSU        ] ksud::module: exec /data/adb/modules/pifs_cleverestech/service.sh
+[ 2026-07-26T12:40:40.347        0:  2943:  2943 I/LSPosed         ] starting lspd 
+[ 2026-07-26T12:40:40.355        0:  2966:  2966 I/LSPosed         ] started lspd 2964
+[ 2026-07-26T12:40:40.507        0:  2964:  2964 D/AndroidRuntime  ] >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+[ 2026-07-26T12:40:40.520        0:  2964:  2964 I/AndroidRuntime  ] Using default boot image
+[ 2026-07-26T12:40:40.520        0:  2964:  2964 I/AndroidRuntime  ] Leaving lock profiling enabled
+[ 2026-07-26T12:40:40.522        0:  2964:  2964 I/lspd            ] Using CollectorTypeCC GC.
+[ 2026-07-26T12:40:40.575        0:  2964:  2964 D/nativeloader    ] InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+[ 2026-07-26T12:40:40.589        0:  2964:  2964 D/nativeloader    ] Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+[ 2026-07-26T12:40:40.590        0:  2964:  2964 D/lspd            ] u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/9/icu") succeeded. 
+[ 2026-07-26T12:40:40.590        0:  2964:  2964 D/lspd            ] I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt76l.dat
+[ 2026-07-26T12:40:40.590        0:  2964:  2964 D/nativeloader    ] Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+[ 2026-07-26T12:40:40.591        0:  2964:  2964 D/nativeloader    ] Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+[ 2026-07-26T12:40:40.626        0:  2964:  2964 D/nativeloader    ] Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+[ 2026-07-26T12:40:40.626        0:  2964:  2964 D/AndroidRuntime  ] Calling main entry org.lsposed.lspd.Main
+[ 2026-07-26T12:40:40.660        0:  2964:  2964 I/LSPosedService  ] starting server...
+[ 2026-07-26T12:40:40.680        0:  2964:  2964 I/LSPosedService  ] version 2.1.0-it (7784)
+[ 2026-07-26T12:40:40.680        0:  2964:  2964 D/nativeloader    ] InitApexLibraries:
+  com_android_art: libnativehelper.so
+  com_android_i18n: libicui18n.so:libicuuc.so:libicu.so
+  com_android_neuralnetworks: libneuralnetworks.so
+[ 2026-07-26T12:40:40.680        0:  2964:  2964 D/nativeloader    ] InitDefaultPublicLibraries for_preload=0: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libclang_rt.hwasan-aarch64-android.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+[ 2026-07-26T12:40:40.680        0:  2964:  2964 D/nativeloader    ] Configuring clns-1 for other apk . target_sdk_version=0, uses_libraries=ALL, library_path=/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand
+[ 2026-07-26T12:40:40.683        0:  2964:  2964 D/nativeloader    ] InitExtendedPublicLibraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libmisys_jni.xiaomi.so:libpag.hyperos.so:libffavc.hyperos.so:libxiaomi_modemdumpsdx55_jni.modem.so:libxiaomi_modemdump_jni.modem.so:libmodemsmartengine_jni.modem.so:libupdateprof.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:libqesdk_ndk_platform.qti.so:liblistenjni.qti.so:libtflite_interface_wrap.touch.so:libestimate_interface.touch.so:libbrushstroke_interface.touch.so:librecognize_interface.touch.so:libgesture_interface.touch.so:libautoui_image.xiaomi.so
+[ 2026-07-26T12:40:40.683        0:  2964:  2964 D/nativeloader    ] Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libmisys_jni.xiaomi.so:libpag.hyperos.so:libffavc.hyperos.so:libxiaomi_modemdumpsdx55_jni.modem.so:libxiaomi_modemdump_jni.modem.so:libmodemsmartengine_jni.modem.so:libupdateprof.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:libqesdk_ndk_platform.qti.so:liblistenjni.qti.so:libtflite_interface_wrap.touch.so:libestimate_interface.touch.so:libbrushstroke_interface.touch.so:librecognize_interface.touch.so:libgesture_interface.touch.so:libautoui_image.xiaomi.so
+[ 2026-07-26T12:40:40.683        0:  2964:  2964 D/nativeloader    ] InitVendorPublicLibraries: libqti-perfd-client.so:libadsprpc.so:libcdsprpc.so:libsdsprpc.so:libfastcvopt.so:libOpenCL.so:libSNPE.so:libmialgo_utils.so:libxmi_slow_motion_mein.so:libmialgo_ai_vision.so:libmiocr.so:libanc_single_bokeh.so:libSEGModel.so
+[ 2026-07-26T12:40:40.684        0:  2964:  2964 D/nativeloader    ] InitProductPublicLibraries: 
+[ 2026-07-26T12:40:40.685        0:  2964:  2964 D/nativeloader    ] Load /data/adb/modules/zygisk_lsposed/daemon.apk!/lib/arm64-v8a/libdaemon.so using isolated ns clns-1 (caller=/data/adb/modules/zygisk_lsposed/daemon.apk): ok
+[ 2026-07-26T12:40:40.687        0:  2964:  3201 I/LSPosedLogcat   ] start running
+[ 2026-07-26T12:40:40.687        0:  2964:  3201 I/LSPosedLogcat   ] New log file: /data/adb/lspd/log/verbose_2026-07-26T12:40:40.687731.log
+[ 2026-07-26T12:40:40.687        0:  2964:  3201 I/LSPosedLogcat   ] New log file: /data/adb/lspd/log/modules_2026-07-26T12:40:40.687941.log
+[ 2026-07-26T12:40:40.691        0:  2964:  2964 W/lspd            ] ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system_ext/framework/miui-framework-pointer-pad.jar*3880989504])
+[ 2026-07-26T12:40:40.692        0:  2964:  2964 W/lspd            ] ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system_ext/framework/miui-framework-pointer-pad.jar*3880989504:/system_ext/framework/miui-framework.autoui.jar*2881616845])
+[ 2026-07-26T12:40:40.695        0:  2964:  2964 I/MessageMonitor  ] Load libmiui_runtime
+[ 2026-07-26T12:40:40.695        0:  2964:  2964 D/nativeloader    ] Load libmiui_runtime.so using system ns (caller=/system_ext/framework/miui-framework.jar): ok
+[ 2026-07-26T12:40:40.695        0:  2964:  2964 E/lspd            ] register_android_view_SurfaceRuntimeShader  
+[ 2026-07-26T12:40:40.695        0:  2964:  2964 E/lspd            ] register_android_view_SurfaceRuntimeShader  0
+[ 2026-07-26T12:40:40.700        0:  2964:  3205 D/nativeloader    ] Load libjavacrypto.so using APEX ns com_android_conscrypt for caller /apex/com.android.conscrypt/javalib/conscrypt.jar: ok
+[ 2026-07-26T12:40:40.701        0:  2964:  2964 W/SQLiteCompatibilityWalFlags ] Cannot read global setting sqlite_compatibility_wal_flags - Application state not available
+[ 2026-07-26T12:40:40.712        0:  2964:  2964 D/ThemeCompatibility ] START loading theme compatibility config.
+[ 2026-07-26T12:40:40.713        0:  2964:  2964 D/ThemeCompatibility ] getVersion(): /data/system/theme_config/theme_compatibility.xml  java.io.FileNotFoundException: /data/system/theme_config/theme_compatibility.xml: open failed: ENOENT (No such file or directory)
+[ 2026-07-26T12:40:40.713        0:  2964:  2964 D/ThemeCompatibility ] getConfigDocumentTree(): 140 vs -1
+[ 2026-07-26T12:40:40.713        0:  2964:  2964 D/ThemeCompatibility ]     parse file: /product/media/theme/theme_compatibility.xml
+[ 2026-07-26T12:40:40.714        0:  2964:  2964 D/ThemeCompatibility ] END loading: version=140 size=71
+[ 2026-07-26T12:40:40.716        0:  2964:  2964 I/OverlayConfig   ] Sorting partitions in the specified order from partitions_order.xml
+[ 2026-07-26T12:40:40.962        0:  2964:  2964 I/AssetManagerImpl  ] Load libmiui_runtime
+[ 2026-07-26T12:40:40.983        0:  2964:  2964 I/lspd            ] AssetManager2(0xb400007959a22f78) locale list changing from [] to [zh-CN]
+[ 2026-07-26T12:40:40.992        0:  2964:  2964 W/lspd            ] ClassLoaderContext parent mismatch.  (PCL[] | PCL[];PCL[/data/adb/modules/zygisk_lsposed/daemon.apk*3404679709])
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.admin.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.database.sqlite is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.power.feature.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.media.performance.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.contextualsearch.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.ondeviceintelligence.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.media.projection.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.companion is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.service.controls.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.text.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.providers.contactkeys.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.companion.virtualdevice.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.uprobestats.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.net.thread.platform.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.view.contentprotection.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.graphics.skia.ddreflags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.dreams is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.graphics.surfaceflinger.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.hardware.input is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.sdk is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.wm.shell.transition is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.input.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.tracing is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.biometrics is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.view.contentcapture.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.content.pm.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.job is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.content.res is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.net.platform.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.aconfig.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.graphics.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.server.app is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.speech.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.stats is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.hardware.biometrics is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.car.feature is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.adpf is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.location.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.settingslib.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.managedprovisioning.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.assist.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.net is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.settingslib.widget.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.internal.camera.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.hardware.libsensor.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.thirdappopt is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.internal.jank is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.providers.settings is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.multiuser is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.power.optimization is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.calllogbackup is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.battery is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.media.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.graphics.libvulkan.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.appfunctions.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.smartspace.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.providers.contacts.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.stability.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.shell.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.media.aaudio is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.hardware.radio is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] suspend_service.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.media.midi is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.libcore.readonly is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.settingslib.widget.selectorwithwidgetpreference.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.service.notification is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.systemui.shared is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.jank is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.wearable is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.media.audio is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.service.chooser is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.compat is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.alarm is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.apex.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.service.quickaccesswallet is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.usage is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.accessibility is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app.supervision.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.utils is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.chre.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.content.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.media.codec is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.internal.os is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.nfc.nci.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.app is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.security.keystore2 is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.crashrecovery.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.tradeinmode.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.hardware.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.telecom.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.settingslib.media.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.policy is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.media.audiopolicy is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.egg.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.internal.compat.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.security is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.service.autofill is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.example.android.aconfig.demo.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.view.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.companion.virtual.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.aconfig_new_storage is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.wm.shell.recents is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.feature.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.systemui is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.graphics.skia.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.power.batterysaver is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.widget.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.media.editing.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.media.codec.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.powerstats is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.graphics.egl.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.media.audioserver is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.deviceidle is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.nfc is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.logmanager is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.permission.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.service.voice.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.content.pm is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.power.hint is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.wm is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.navimmersive.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.os is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.service.dreams is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] xiaomi.platform.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.graphics.libgui.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.hardware.usb.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.provider is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.job is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.internal.foldables.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.internal.telephony.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.webkit is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.credentials.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.display.feature.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.server.notification is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] android.appwidget.flags is mapped to system
+[ 2026-07-26T12:40:41.014        0:  2964:  2964 I/AconfigPackage  ] com.android.frameworks.sensorservice.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.window.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.adaptiveauth is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.net.wifi.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.media.tv.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.server.usb.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.os.vibrator is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.hardware.devicestate.feature.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.server.usage is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.server is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.wm.shell is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.view.inputmethod is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.graphics.hwui.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.server.backup is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.internal.pm.pkg.component.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.view.accessibility is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] android.media.audio is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.server.am is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.media.playback.flags is mapped to system
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.settings.accessibility is mapped to system_ext
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.settings.keyboard is mapped to system_ext
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.settings.factory_reset is mapped to system_ext
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.systemui.accessibility.accessibilitymenu is mapped to system_ext
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.server.policy.feature.flags is mapped to system_ext
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.settings.flags is mapped to system_ext
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.settings.media_drm is mapped to system_ext
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.launcher3 is mapped to system_ext
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.uwb.flags is mapped to com.android.uwb
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.ranging.flags is mapped to com.android.uwb
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.bluetooth.flags is mapped to com.android.bt
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.appsearch.flags is mapped to com.android.appsearch
+[ 2026-07-26T12:40:41.015        0:  2964:  2964 I/AconfigPackage  ] com.android.permission.flags is mapped to com.android.permission
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.webapp.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.webapp.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.webapp.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] com.android.system.virtualmachine.flags is mapped to com.android.virt
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] com.android.org.conscrypt.flags is mapped to com.android.conscrypt
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] com.android.media.extractor.flags is mapped to com.android.media
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] com.android.media.mainline.flags is mapped to com.android.media
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] com.android.os.statsd.flags is mapped to com.android.os.statsd
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] android.os.profiling is mapped to com.android.profiling
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] com.android.wifi.flags is mapped to com.android.wifi
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] android.media.swcodec.flags is mapped to com.android.media.swcodec
+[ 2026-07-26T12:40:41.016        0:  2964:  2964 I/AconfigPackage  ] android.uprobestats.mainline.flags is mapped to com.android.uprobestats
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.ipsec.flags is mapped to com.android.ipsec
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.adservices.flags is mapped to com.android.adservices
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.sdksandbox.flags is mapped to com.android.adservices
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.devicelock.flags is mapped to com.android.devicelock
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] android.graphics.pdf.flags is mapped to com.android.mediaprovider
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.providers.media.flags is mapped to com.android.mediaprovider
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] android.graphics.pdf.flags.readonly is mapped to com.android.mediaprovider
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.net.ct.flags is mapped to com.android.tethering
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.net.flags is mapped to com.android.tethering
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] android.net.vcn is mapped to com.android.tethering
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.nearby.flags is mapped to com.android.tethering
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] android.net.http is mapped to com.android.tethering
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.net.thread.flags is mapped to com.android.tethering
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.icu is mapped to com.android.i18n
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.art.flags is mapped to com.android.art
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.libcore is mapped to com.android.art
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.healthfitness.flags is mapped to com.android.healthfitness
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] android.provider.flags is mapped to com.android.configinfrastructure
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 I/AconfigPackage  ] com.android.server.deviceconfig is mapped to com.android.configinfrastructure
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.cellbroadcast.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.cellbroadcast.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.cellbroadcast.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.compos.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.compos.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.compos.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.npumanager.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.npumanager.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.npumanager.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.rkpd.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.rkpd.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.rkpd.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.telephonycore.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.telephonycore.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.telephonycore.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.adbd.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.adbd.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.017        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.adbd.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.018        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.crashrecovery.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.crashrecovery.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.018        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.crashrecovery.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.018        0:  2964:  2964 E/AconfigPackage  ] mapStorageFile exception for /metadata/aconfig/boot/com.android.nfcservices.val
+java.nio.file.NoSuchFileException: /metadata/aconfig/boot/com.android.nfcservices.val
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:183)
+	at java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at android.os.flagging.AconfigPackage.mapStorageFile(AconfigPackage.java:182)
+	at android.os.flagging.AconfigPackage.<clinit>(AconfigPackage.java:91)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.init(FeatureFlagsImpl.java:19)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.FeatureFlagsImpl.newStoragePublicApi(FeatureFlagsImpl.java:63)
+	at com.android.internal.hidden_from_bootclasspath.android.provider.flags.Flags.newStoragePublicApi(Flags.java:32)
+	at android.app.SystemServiceRegistry.<clinit>(SystemServiceRegistry.java:1902)
+	at android.app.ContextImpl.<init>(ContextImpl.java:382)
+	at android.app.ContextImpl.createSystemContext(ContextImpl.java:3457)
+	at android.app.ActivityThread.getSystemContext(ActivityThread.java:3579)
+	at android.app.ActivityThread.initializeSystemThread(ActivityThread.java:9813)
+	at android.app.ActivityThread.attach(ActivityThread.java:9769)
+	at android.app.ActivityThread.systemMain(ActivityThread.java:9828)
+	at org.lsposed.lspd.Main.main(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:411)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:394)
+[ 2026-07-26T12:40:41.018        0:  2964:  2964 W/AconfigPackage  ] failed to map some package from com.android.nfcservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+[ 2026-07-26T12:40:41.018        0:  2964:  2964 I/AconfigPackage  ] com.android.adservices.ondevicepersonalization.flags is mapped to com.android.ondevicepersonalization
+[ 2026-07-26T12:40:41.018        0:  2964:  2964 D/FeatureParser   ] praser device feature in /product/etc/device_features/piano.xml
+[ 2026-07-26T12:40:41.019        0:  2964:  2964 D/FeatureParser   ] praser device feature in /product/etc/removable_apk_info.xml
+[ 2026-07-26T12:40:41.019        0:  2964:  2964 I/SystemServiceRegistry ] regMtkService start
+[ 2026-07-26T12:40:41.019        0:  2964:  2964 W/System          ] ClassLoader referenced unknown path: system/framework/mediatek-framework.jar
+[ 2026-07-26T12:40:41.019        0:  2964:  2964 E/SystemServiceRegistry ] regMtkService:java.lang.ClassNotFoundException: mediatek.app.MtkSystemServiceRegistry
+[ 2026-07-26T12:40:41.019        0:  2964:  2964 I/SystemServiceRegistry ] setMtkSystemServiceName start
+[ 2026-07-26T12:40:41.019        0:  2964:  2964 I/SystemServiceRegistry ] registerAllMtkService start
+[ 2026-07-26T12:40:41.021        0:  2964:  2964 E/FeatureFlagsImplExport ] android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+[ 2026-07-26T12:40:41.023        0:  2964:  2964 I/LSPosedService  ] service package is not started, wait 1s.
+[ 2026-07-26T12:40:41.315        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,1824,1824]mntbuf cleaned
+[ 2026-07-26T12:40:41.318        0:  1566:  1753 I/zn-daemon64     ] nscleaner for zygote started
+[ 2026-07-26T12:40:41.368        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,1824,1824]preload zygisk modules
+[ 2026-07-26T12:40:41.371        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,1824,1824]loaded zygisk_lsposed at 0x31d6fa7000
+[ 2026-07-26T12:40:41.371        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,1824,1824]preloaded 1/1 modules
+[ 2026-07-26T12:40:41.371        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,1824,1824]remap self anon
+[ 2026-07-26T12:40:41.444        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,1824,1824]remap self anon done
+[ 2026-07-26T12:40:41.472        0:  1566:  1567 I/zn-daemon64     ] [zn-zygisk-loader64,0,3318,3318]cfi shadow addr 0x6ffacc0000
+[ 2026-07-26T12:40:41.476        0:  3325:  3325 I/zn-zygisk-companion64 ] spawning companion for zygisk_lsposed
+[ 2026-07-26T12:40:41.476        0:  2964:  3205 I/LSPosedService  ] LSPSystemServerService: starting new bridge
+[ 2026-07-26T12:40:41.816        0:  2964:  3276 I/lspd            ] AssetManager2(0xb400007959a24b98) locale list changing from [] to [zh-CN]
+[ 2026-07-26T12:40:42.024        0:  2964:  2964 I/LSPosedService  ] service package is not started, wait 1s.
+[ 2026-07-26T12:40:43.024        0:  2964:  2964 I/LSPosedService  ] service package is not started, wait 1s.
+[ 2026-07-26T12:40:44.158        0:  2964:  2964 I/LSPosed         ] mount dex2oat /apex/com.android.art/bin/dex2oat64
+[ 2026-07-26T12:40:44.158        0:  2964:  2964 I/LSPosed         ] mount dex2oat /apex/com.android.art/bin/dex2oat32
+[ 2026-07-26T12:40:44.162        0:  2964:  2964 I/lspd            ] AssetManager2(0xb400007959a23298) locale list changing from [] to [zh-CN]
+[ 2026-07-26T12:40:44.163     1000:  3318:  3642 I/LSPosedBridge   ] system server context dispatched
+[ 2026-07-26T12:40:44.163     1000:  3318:  3642 I/LSPosedBridge   ] binder received
+[ 2026-07-26T12:40:44.163        0:  2964:  2964 I/LSPosedService  ] sent service to bridge
+[ 2026-07-26T12:40:45.493        0:  2964:  3205 I/LSPosed         ] cleanup dex2oat wrapper in zygote 1824 ns
+[ 2026-07-26T12:40:45.591        0:  4175:  4175 I/KernelSU        ] ksud::cli: command: Module { command: Config { internal: Some("tricky_store"), command: Set { key: "override.description", value: Some("⚡ 396 个应用 | 🔑 Yurikey | 🛡\u{fe0f} 2026-07-01 | 🔒 VBHash"), stdin: false, temp: false } } }
+[ 2026-07-26T12:40:47.731        0:  2964:  3205 I/LSPosedService  ] manager is not installed
+[ 2026-07-26T12:40:47.731        0:  2964:  3276 W/lspd            ] Long monitor contention with owner Thread-2 (3205) at void c3.b()(r8-map-id-ef69aa9584fd3639033f649d3a48cddbe781c8748ddd534fdc2454a8b2effb6c:51) waiters=0 in void c3.c() for 1.994s
+[ 2026-07-26T12:40:47.732        0:  2964:  3276 I/LSPosedService  ] manager is not installed
+[ 2026-07-26T12:40:47.732        0:  2964:  3276 W/lspd            ] PerfMonitor async binderTransact :  time=1996ms interface=android.app.IUidObserver code=2
+[ 2026-07-26T12:40:48.499    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-1,0,1] [HookEntry] 模块加载完成，当前应用版本1934-6.5
+[ 2026-07-26T12:40:48.558        0:  2964:  3177 I/lspd            ] This is non sticky GC, maxfree is 33554432 minfree is 8388608
+[ 2026-07-26T12:40:48.665    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-2,0,1] [IslandExpandedMediaAmbientFlowHooker] 展开态媒体流光 Hook 已初始化: methods=9
+[ 2026-07-26T12:40:48.670    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-3,0,1] [NotificationMediaAmbientFlowHooker] 通知中心媒体流光 Hook 已初始化: methods=6
+[ 2026-07-26T12:40:48.672    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-4,0,1] [NotificationMediaCoverStyleHooker] 通知中心媒体封面 Hook 已初始化: methods=5
+[ 2026-07-26T12:40:48.675    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-5,0,1] [HookEntry] 超级岛歌词模式: mode=0
+[ 2026-07-26T12:40:48.722    10203:  4699:  4699 E/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[UnlockAllFocusHook],125b-19f9cb9c673-2-6,0,1] failed to hook canShowFocus — Didn't find class "miui.systemui.notification.NotificationSettingsManager" on path: DexPathList[[zip file "/system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk"],nativeLibraryDirectories=[/system_ext/priv-app/MiuiSystemUI/lib/arm64, /system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64, /system_ext/app/miuisystem/miuisystem.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+[ 2026-07-26T12:40:48.723    10203:  4699:  4699 E/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[UnlockAllFocusHook],125b-19f9cb9c673-2-7,0,1] canCustomFocus not found (may be expected) — Didn't find class "miui.systemui.notification.NotificationSettingsManager" on path: DexPathList[[zip file "/system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk"],nativeLibraryDirectories=[/system_ext/priv-app/MiuiSystemUI/lib/arm64, /system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64, /system_ext/app/miuisystem/miuisystem.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+[ 2026-07-26T12:40:48.856    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[io.github.proify.lyricon.core,XposedBridge,125b-19f9cb9c673-2-8,0,1] [Lyricon-Xposed] Hooking package: com.android.systemui (Process: com.android.systemui)
+[ 2026-07-26T12:40:50.506    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-9,0,1] [SourceManager] 启动歌词源: Lyricon
+[ 2026-07-26T12:40:50.515    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-a,0,1] [LyriconSource] 数据源已启动
+[ 2026-07-26T12:40:50.516    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-b,0,1] [HookEntry] 系统环境初始化完成: enabled=true, source=Lyricon, mode=0
+[ 2026-07-26T12:40:50.524    10203:  4699:  4699 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],125b-19f9cb9c673-2-c,0,1] bluetooth receiver registered, enabled=true
+[ 2026-07-26T12:40:50.531    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[io.github.proify.lyricon.core,XposedBridge,125b-19f9cb9c673-2-d,0,1] [Lyricon-Xposed] Lyricon BridgeCentral initialized successfully.
+[ 2026-07-26T12:40:50.544    10167:  5597:  5597 E/LSPosedFramework ] (com.miui.misound)[com.sevtinge.hyperceiler,HyperCeiler,15dd-19f9cb9ce6e-2-1,0,1] [com.miui.misound][IncreaseSamplingRate]: hook com.miui.misound.mihearingassist.h.a failed by 
+java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:597)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass(Unknown Source:7)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass$default(Unknown Source:5)
+	at com.sevtinge.hyperceiler.libhook.rules.misound.IncreaseSamplingRate.init(Unknown Source:89)
+	at a5.initHook(Unknown Source:9)
+	at a5.initHook(SourceFile:81)
+	at com.sevtinge.hyperceiler.libhook.app.MiSound.onPackageLoaded(Unknown Source:37)
+	at a5.a(Unknown Source:26)
+	at a5.onLoad(SourceFile:74)
+	at ip0.accept(Unknown Source:460)
+	at java.util.HashMap.forEach(HashMap.java:1432)
+	at jp0.b(Unknown Source:2144)
+	at jp0.onPackageReady(Unknown Source:50)
+	at t0.callOnPackageReady(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:43)
+	at t.intercept(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:147)
+	at k.proceed(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:33)
+	at android.os.BaerQuon.createOrUpdateClassLoaderLocked(BaerQuon.java)
+	at android.app.LoadedApk.getClassLoader(LoadedApk.java:1221)
+	at android.app.LoadedApk.getResources(LoadedApk.java:1480)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3509)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3500)
+	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:8535)
+	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2826)
+	at android.os.Handler.dispatchMessage(Handler.java:114)
+	at android.os.Looper.loopOnce(Looper.java:274)
+	at android.os.Looper.loop(Looper.java:369)
+	at android.app.ActivityThread.main(ActivityThread.java:10089)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1137)
+Caused by: java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	... 32 more
+[ 2026-07-26T12:40:50.547    10167:  5597:  5597 E/LSPosedFramework ] (com.miui.misound)[com.sevtinge.hyperceiler,HyperCeiler,15dd-19f9cb9ce6e-2-2,0,1] [com.miui.misound][IncreaseSamplingRate]: hook com.miui.misound.mihearingassist.h.b failed by 
+java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:597)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass(Unknown Source:7)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass$default(Unknown Source:5)
+	at com.sevtinge.hyperceiler.libhook.rules.misound.IncreaseSamplingRate.init(Unknown Source:163)
+	at a5.initHook(Unknown Source:9)
+	at a5.initHook(SourceFile:81)
+	at com.sevtinge.hyperceiler.libhook.app.MiSound.onPackageLoaded(Unknown Source:37)
+	at a5.a(Unknown Source:26)
+	at a5.onLoad(SourceFile:74)
+	at ip0.accept(Unknown Source:460)
+	at java.util.HashMap.forEach(HashMap.java:1432)
+	at jp0.b(Unknown Source:2144)
+	at jp0.onPackageReady(Unknown Source:50)
+	at t0.callOnPackageReady(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:43)
+	at t.intercept(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:147)
+	at k.proceed(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:33)
+	at android.os.BaerQuon.createOrUpdateClassLoaderLocked(BaerQuon.java)
+	at android.app.LoadedApk.getClassLoader(LoadedApk.java:1221)
+	at android.app.LoadedApk.getResources(LoadedApk.java:1480)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3509)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3500)
+	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:8535)
+	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2826)
+	at android.os.Handler.dispatchMessage(Handler.java:114)
+	at android.os.Looper.loopOnce(Looper.java:274)
+	at android.os.Looper.loop(Looper.java:369)
+	at android.app.ActivityThread.main(ActivityThread.java:10089)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1137)
+Caused by: java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	... 32 more
+[ 2026-07-26T12:40:50.560    10167:  5597:  5597 E/LSPosedFramework ] (com.miui.misound)[com.sevtinge.hyperceiler,HyperCeiler,15dd-19f9cb9ce6e-2-3,0,1] [com.miui.misound][IncreaseSamplingRate]: hook com.miui.misound.mihearingassist.h.b failed by 
+java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:597)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass(Unknown Source:7)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass$default(Unknown Source:5)
+	at com.sevtinge.hyperceiler.libhook.rules.misound.IncreaseSamplingRate.init(Unknown Source:485)
+	at a5.initHook(Unknown Source:9)
+	at a5.initHook(SourceFile:81)
+	at com.sevtinge.hyperceiler.libhook.app.MiSound.onPackageLoaded(Unknown Source:37)
+	at a5.a(Unknown Source:26)
+	at a5.onLoad(SourceFile:74)
+	at ip0.accept(Unknown Source:460)
+	at java.util.HashMap.forEach(HashMap.java:1432)
+	at jp0.b(Unknown Source:2144)
+	at jp0.onPackageReady(Unknown Source:50)
+	at t0.callOnPackageReady(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:43)
+	at t.intercept(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:147)
+	at k.proceed(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:33)
+	at android.os.BaerQuon.createOrUpdateClassLoaderLocked(BaerQuon.java)
+	at android.app.LoadedApk.getClassLoader(LoadedApk.java:1221)
+	at android.app.LoadedApk.getResources(LoadedApk.java:1480)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3509)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3500)
+	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:8535)
+	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2826)
+	at android.os.Handler.dispatchMessage(Handler.java:114)
+	at android.os.Looper.loopOnce(Looper.java:274)
+	at android.os.Looper.loop(Looper.java:369)
+	at android.app.ActivityThread.main(ActivityThread.java:10089)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1137)
+Caused by: java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	... 32 more
+[ 2026-07-26T12:40:50.953     1000:  5701:  5701 I/LSPosedFramework ] (miui.systemui.plugin:flashlight)[com.lidesheng.hyperlyric,HyperLyric,1645-19f9cb9d009-2-1,0,1] [HookEntry] 模块加载完成，当前应用版本1934-6.5
+[ 2026-07-26T12:40:51.754    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-e,0,1] [HookIslandGlow] 媒体岛光效 Hook 已初始化: method=updateTemplate
+[ 2026-07-26T12:40:51.763    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-f,0,1] [IslandProgressGlowHooker] 边缘光效进度条 Hook 已初始化
+[ 2026-07-26T12:40:51.783    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-10,0,1] [IslandMusicWaveColorHooker] 音频律动封面色 Hook 已初始化
+[ 2026-07-26T12:40:51.792    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-11,0,1] [IslandAlbumCoverStyleHooker] 超级岛封面样式 Hook 已初始化
+[ 2026-07-26T12:40:51.793    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-12,0,1] [SystemUIHookRegistry] 超级岛 Hook 已初始化
+[ 2026-07-26T12:40:51.910    10203:  4699:  4699 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],125b-19f9cb9c673-2-13,0,1] received bluetooth broadcast: action=android.bluetooth.device.action.BATTERY_LEVEL_CHANGED enabled=true showDeviceName=true stored=false
+[ 2026-07-26T12:40:51.910    10203:  4699:  4699 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],125b-19f9cb9c673-2-14,0,1] resolve bluetooth device name: resolved=Xiaomi Focus Pen fromDevice=Xiaomi Focus Pen fromCache=null address=70:61:EE:B4:CD:04
+[ 2026-07-26T12:40:51.910    10203:  4699:  4699 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],125b-19f9cb9c673-2-15,0,1] bluetooth battery broadcast: battery=100 key=70:61:EE:B4:CD:04 deviceName=Xiaomi Focus Pen pendingNameRefresh=false
+[ 2026-07-26T12:40:51.910    10203:  4699:  4699 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],125b-19f9cb9c673-2-16,0,1] skip bluetooth battery update: connected=false battery=100 key=70:61:EE:B4:CD:04
+[ 2026-07-26T12:40:52.479    10271:  5818:  5818 E/LSPosedFramework ] (com.miui.weather2)[com.sevtinge.hyperceiler,HyperCeiler,16ba-19f9cb9d5ff-2-1,0,1] [SetDeviceLevel]: class is null
+[ 2026-07-26T12:40:56.111    10203:  4699:  4699 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,125b-19f9cb9c673-2-17,0,1] [LyriconSource] 订阅连接已建立
+[ 2026-07-26T12:40:56.435        0:  5997:  5997 I/KernelSU        ] ksud::cli: command: BootCompleted
+[ 2026-07-26T12:40:56.485        0:  5997:  5997 I/KernelSU        ] ksud::init_event: on_boot_completed triggered!
+[ 2026-07-26T12:40:56.485        0:  5997:  5997 I/KernelSU        ] ksud::utils: safemode: false
+[ 2026-07-26T12:40:56.485        0:  5997:  5997 I/KernelSU        ] ksud::utils: kernel_safemode: false
+[ 2026-07-26T12:40:56.485        0:  5997:  5997 I/KernelSU        ] ksud::module: /data/adb/boot-completed.d not exists, skip
+[ 2026-07-26T12:40:56.486        0:  5997:  5997 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 2026-07-26T12:40:56.488        0:  5997:  5997 I/KernelSU        ] ksud::metamodule: Found metamodule in modules directory: /data/adb/modules/hybrid_mount
+[ 2026-07-26T12:40:56.489        0:  5997:  5997 I/KernelSU        ] ksud::module: /data/adb/modules/AudioLatencyOptN is disabled, skip
+[ 2026-07-26T12:40:56.530        0:  2964:  3177 I/lspd            ] This is sticky GC, maxfree is 33554432 minfree is 8388608
+[ 2026-07-26T12:40:56.941        0:  2964:  3177 I/lspd            ] This is non sticky GC, maxfree is 33554432 minfree is 8388608
+[ 2026-07-26T12:40:56.941        0:  2964:  3177 I/lspd            ] Background concurrent copying GC freed 20MB AllocSpace bytes, 153(17MB) LOS objects, 62% free, 57MB/153MB, paused 40us,1.973ms total 338.244ms
+[ 2026-07-26T12:40:57.861     1000:  6422:  6422 I/LSPosedFramework ] (com.miui.securitycenter.bootaware)[com.example.miuilight,XposedBridge,1916-19f9cb9eb05-2-1,0,1] MiuiLightHook: hooked d9.a#a(Context,int)
+[ 2026-07-26T12:40:57.865     1000:  6422:  6422 I/LSPosedFramework ] (com.miui.securitycenter.bootaware)[com.example.miuilight,XposedBridge,1916-19f9cb9eb05-2-2,0,1] MiuiLightHook: proxy hooks installed in com.miui.securitycenter
+[ 2026-07-26T12:41:05.370    10288:  7932:  7932 I/LSPosedFramework ] (com.netease.cloudmusic)[io.github.proify.lyricon.cmprovider,XposedBridge,1efc-19f9cba0841-2-1,0,1] [CloudMusicProvider][D][com.netease.cloudmusic] Hooking com.netease.cloudmusic
+[ 2026-07-26T12:41:05.398    10288:  7932:  7932 I/LSPosedFramework ] (com.netease.cloudmusic)[io.github.proify.lyricon.cmprovider,XposedBridge,1efc-19f9cba0841-2-2,0,1] [CloudMusicProvider][D][com.netease.cloudmusic] Hooking, processName= com.netease.cloudmusic
+[ 2026-07-26T12:41:06.821     1000:  8631:  8631 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21b7-19f9cba0e05-2-1,0,1] MiuiLightHook: hooked d9.a#a(Context,int)
+[ 2026-07-26T12:41:06.865     1000:  8631:  8631 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21b7-19f9cba0e05-2-2,0,1] MiuiLightHook: proxy hooks installed in com.miui.securitycenter
+[ 2026-07-26T12:41:07.939    10288:  7932:  7932 I/LSPosedFramework ] (com.netease.cloudmusic)[io.github.proify.lyricon.cmprovider,XposedBridge,1efc-19f9cba0841-2-3,0,1] [CloudMusicProvider][D][com.netease.cloudmusic] PreferencesMonitor initialization completed in 424ms
+[ 2026-07-26T12:41:11.964    10288:  7932:  7932 I/LSPosedFramework ] (com.netease.cloudmusic)[io.github.proify.lyricon.cmprovider,XposedBridge,1efc-19f9cba0841-2-4,0,1] [CloudMusicProvider][I][com.netease.cloudmusic] Provider registered
+[ 2026-07-26T12:41:12.904     1000: 10627: 10627 I/LSPosedFramework ] (com.miui.securitycenter)[com.example.miuilight,XposedBridge,2983-19f9cba25c6-2-1,0,1] MiuiLightHook: hooked d9.a#a(Context,int)
+[ 2026-07-26T12:41:12.927     1000: 10627: 10627 I/LSPosedFramework ] (com.miui.securitycenter)[com.example.miuilight,XposedBridge,2983-19f9cba25c6-2-2,0,1] MiuiLightHook: proxy hooks installed in com.miui.securitycenter
+[ 2026-07-26T12:41:14.228    10288:  7932: 12021 I/LSPosedFramework ] (com.netease.cloudmusic)[io.github.proify.lyricon.cmprovider,XposedBridge,1efc-19f9cba0841-13b-5,0,1] [CloudMusicProvider][D][com.netease.cloudmusic] Load lyric file: localCache, file=/storage/emulated/0/Android/data/com.netease.cloudmusic/files/LyriconDownload/489970714
+[ 2026-07-26T12:41:20.862     1000: 14585: 14585 I/LSPosedFramework ] (miui.systemui.plugin:flashlight)[com.lidesheng.hyperlyric,HyperLyric,38f9-19f9cba44de-2-1,0,1] [HookEntry] 模块加载完成，当前应用版本1934-6.5
+[ 2026-07-26T12:43:11.941    10323: 16404: 16459 I/LSPosedFramework ] (com.example.miuilight)[com.example.miuilight,XposedBridge,4014-19f9cbbf6c4-3c-1,0,1] MiuiLightHook: proxy hooks installed in com.miui.contentcatcher
+[ 2026-07-26T12:43:39.142    10271: 17597: 17597 E/LSPosedFramework ] (com.miui.weather2)[com.sevtinge.hyperceiler,HyperCeiler,44bd-19f9cbc6106-2-1,0,1] [SetDeviceLevel]: class is null
+[ 2026-07-26T12:43:46.949     1000: 18223: 18223 I/LSPosedFramework ] (miui.systemui.plugin:flashlight)[com.lidesheng.hyperlyric,HyperLyric,472f-19f9cbc7f85-2-1,0,1] [HookEntry] 模块加载完成，当前应用版本1934-6.5
+[ 2026-07-26T12:43:47.174     1000:  8631: 11302 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21b7-19f9cba0e05-9f-3,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon color=0xff000400 pkg=com.miui.securitycenter style=7 takeover=true
+[ 2026-07-26T12:43:49.975     1000:  8631: 11302 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21b7-19f9cba0e05-9f-4,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon color=0x0 pkg=com.miui.securitycenter style=7 takeover=true
+[ 2026-07-26T12:44:46.342     1000:  8631: 11302 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21b7-19f9cba0e05-9f-5,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon color=0xff000400 pkg=com.miui.securitycenter style=7 takeover=true
+[ 2026-07-26T12:44:49.790     1000:  8631: 11302 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21b7-19f9cba0e05-9f-6,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon color=0x0 pkg=com.miui.securitycenter style=7 takeover=true
+[ 2026-07-26T12:45:21.453     1000:  8631: 11302 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21b7-19f9cba0e05-9f-7,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon color=0xff000400 pkg=com.miui.securitycenter style=7 takeover=true
+[ 2026-07-26T12:45:25.160     1000:  8631: 11302 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21b7-19f9cba0e05-9f-8,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon color=0x0 pkg=com.miui.securitycenter style=7 takeover=true
+[ 2026-07-26T12:45:47.352     2000: 25610: 25610 I/LSPosedFramework ] (com.android.shell)[framework,Main,640a-19f9cbe55d8-2-1,0,1] Loaded manager, skipping next steps
+[ 2026-07-26T12:45:47.398     2000: 25610: 25610 I/LSPosedManager  ] OkHttp cache size: 500MiB at /data/user/0/com.android.shell/cache/http_cache

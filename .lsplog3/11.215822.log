@@ -1,0 +1,117 @@
+----part 1 start----
+[ 2026-07-26T10:06:19.151    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-1,0,1] [HookEntry] 模块加载完成，当前应用版本1934-6.5
+[ 2026-07-26T10:06:19.376    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-2,0,1] [IslandExpandedMediaAmbientFlowHooker] 展开态媒体流光 Hook 已初始化: methods=9
+[ 2026-07-26T10:06:19.388    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-3,0,1] [NotificationMediaAmbientFlowHooker] 通知中心媒体流光 Hook 已初始化: methods=6
+[ 2026-07-26T10:06:19.391    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-4,0,1] [NotificationMediaCoverStyleHooker] 通知中心媒体封面 Hook 已初始化: methods=5
+[ 2026-07-26T10:06:19.409    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-5,0,1] [HookEntry] 超级岛歌词模式: mode=0
+[ 2026-07-26T10:06:19.463    10203:  4715:  4715 E/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[UnlockAllFocusHook],126b-19f9c2c560c-2-6,0,1] failed to hook canShowFocus — Didn't find class "miui.systemui.notification.NotificationSettingsManager" on path: DexPathList[[zip file "/system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk"],nativeLibraryDirectories=[/system_ext/priv-app/MiuiSystemUI/lib/arm64, /system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64, /system_ext/app/miuisystem/miuisystem.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+[ 2026-07-26T10:06:19.469    10203:  4715:  4715 E/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[UnlockAllFocusHook],126b-19f9c2c560c-2-7,0,1] canCustomFocus not found (may be expected) — Didn't find class "miui.systemui.notification.NotificationSettingsManager" on path: DexPathList[[zip file "/system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk"],nativeLibraryDirectories=[/system_ext/priv-app/MiuiSystemUI/lib/arm64, /system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64, /system_ext/app/miuisystem/miuisystem.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+[ 2026-07-26T10:06:19.609    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[io.github.proify.lyricon.core,XposedBridge,126b-19f9c2c560c-2-8,0,1] [Lyricon-Xposed] Hooking package: com.android.systemui (Process: com.android.systemui)
+[ 2026-07-26T10:06:21.269    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-9,0,1] [SourceManager] 启动歌词源: Lyricon
+[ 2026-07-26T10:06:21.279    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-a,0,1] [LyriconSource] 数据源已启动
+[ 2026-07-26T10:06:21.279    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-b,0,1] [HookEntry] 系统环境初始化完成: enabled=true, source=Lyricon, mode=0
+[ 2026-07-26T10:06:21.282    10167:  5621:  5621 E/LSPosedFramework ] (com.miui.misound)[com.sevtinge.hyperceiler,HyperCeiler,15f5-19f9c2c5e60-2-2,0,1] [com.miui.misound][IncreaseSamplingRate]: hook com.miui.misound.mihearingassist.h.b failed by 
+java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:597)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass(Unknown Source:7)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass$default(Unknown Source:5)
+	at com.sevtinge.hyperceiler.libhook.rules.misound.IncreaseSamplingRate.init(Unknown Source:163)
+	at a5.initHook(Unknown Source:9)
+	at a5.initHook(SourceFile:81)
+	at com.sevtinge.hyperceiler.libhook.app.MiSound.onPackageLoaded(Unknown Source:37)
+	at a5.a(Unknown Source:26)
+	at a5.onLoad(SourceFile:74)
+	at ip0.accept(Unknown Source:460)
+	at java.util.HashMap.forEach(HashMap.java:1432)
+	at jp0.b(Unknown Source:2144)
+	at jp0.onPackageReady(Unknown Source:50)
+	at t0.callOnPackageReady(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:43)
+	at t.intercept(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:147)
+	at k.proceed(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:33)
+	at android.app.BriaeshRean.createOrUpdateClassLoaderLocked(BriaeshRean.java)
+	at android.app.LoadedApk.getClassLoader(LoadedApk.java:1221)
+	at android.app.LoadedApk.getResources(LoadedApk.java:1480)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3509)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3500)
+	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:8535)
+	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2826)
+	at android.os.Handler.dispatchMessage(Handler.java:114)
+	at android.os.Looper.loopOnce(Looper.java:274)
+	at android.os.Looper.loop(Looper.java:369)
+	at android.app.ActivityThread.main(ActivityThread.java:10089)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1137)
+Caused by: java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	... 32 more
+[ 2026-07-26T10:06:21.286    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-c,0,1] bluetooth receiver registered, enabled=true
+[ 2026-07-26T10:06:21.292    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[io.github.proify.lyricon.core,XposedBridge,126b-19f9c2c560c-2-d,0,1] [Lyricon-Xposed] Lyricon BridgeCentral initialized successfully.
+[ 2026-07-26T10:06:21.294    10167:  5621:  5621 E/LSPosedFramework ] (com.miui.misound)[com.sevtinge.hyperceiler,HyperCeiler,15f5-19f9c2c5e60-2-3,0,1] [com.miui.misound][IncreaseSamplingRate]: hook com.miui.misound.mihearingassist.h.b failed by 
+java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:597)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass(Unknown Source:7)
+	at io.github.kyuubiran.ezxhelper.core.util.ClassUtil.loadClass$default(Unknown Source:5)
+	at com.sevtinge.hyperceiler.libhook.rules.misound.IncreaseSamplingRate.init(Unknown Source:485)
+	at a5.initHook(Unknown Source:9)
+	at a5.initHook(SourceFile:81)
+	at com.sevtinge.hyperceiler.libhook.app.MiSound.onPackageLoaded(Unknown Source:37)
+	at a5.a(Unknown Source:26)
+	at a5.onLoad(SourceFile:74)
+	at ip0.accept(Unknown Source:460)
+	at java.util.HashMap.forEach(HashMap.java:1432)
+	at jp0.b(Unknown Source:2144)
+	at jp0.onPackageReady(Unknown Source:50)
+	at t0.callOnPackageReady(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:43)
+	at t.intercept(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:147)
+	at k.proceed(r8-map-id-641cd0d9f3f2136e302270e7ebfbbc1eaeb97195335bb6679d8c71628db6c7ea:33)
+	at android.app.BriaeshRean.createOrUpdateClassLoaderLocked(BriaeshRean.java)
+	at android.app.LoadedApk.getClassLoader(LoadedApk.java:1221)
+	at android.app.LoadedApk.getResources(LoadedApk.java:1480)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3509)
+	at android.app.ContextImpl.createAppContext(ContextImpl.java:3500)
+	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:8535)
+	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2826)
+	at android.os.Handler.dispatchMessage(Handler.java:114)
+	at android.os.Looper.loopOnce(Looper.java:274)
+	at android.os.Looper.loop(Looper.java:369)
+	at android.app.ActivityThread.main(ActivityThread.java:10089)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1137)
+Caused by: java.lang.ClassNotFoundException: com.miui.misound.mihearingassist.h
+	... 32 more
+[ 2026-07-26T10:06:21.696     1000:  5730:  5730 I/LSPosedFramework ] (miui.systemui.plugin:flashlight)[com.lidesheng.hyperlyric,HyperLyric,1662-19f9c2c6000-2-1,0,1] [HookEntry] 模块加载完成，当前应用版本1934-6.5
+[ 2026-07-26T10:06:21.878    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-e,0,1] received bluetooth broadcast: action=android.bluetooth.device.action.BATTERY_LEVEL_CHANGED enabled=true showDeviceName=true stored=false
+[ 2026-07-26T10:06:21.879    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-f,0,1] resolve bluetooth device name: resolved=Xiaomi Focus Pen fromDevice=Xiaomi Focus Pen fromCache=null address=70:61:EE:B4:CD:04
+[ 2026-07-26T10:06:21.879    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-10,0,1] bluetooth battery broadcast: battery=99 key=70:61:EE:B4:CD:04 deviceName=Xiaomi Focus Pen pendingNameRefresh=false
+[ 2026-07-26T10:06:21.879    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-11,0,1] skip bluetooth battery update: connected=false battery=99 key=70:61:EE:B4:CD:04
+[ 2026-07-26T10:06:22.420    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-12,0,1] [HookIslandGlow] 媒体岛光效 Hook 已初始化: method=updateTemplate
+[ 2026-07-26T10:06:22.429    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-13,0,1] [IslandProgressGlowHooker] 边缘光效进度条 Hook 已初始化
+[ 2026-07-26T10:06:22.446    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-14,0,1] [IslandMusicWaveColorHooker] 音频律动封面色 Hook 已初始化
+[ 2026-07-26T10:06:22.454    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-15,0,1] [IslandAlbumCoverStyleHooker] 超级岛封面样式 Hook 已初始化
+[ 2026-07-26T10:06:22.454    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-16,0,1] [SystemUIHookRegistry] 超级岛 Hook 已初始化
+[ 2026-07-26T10:06:23.525    10271:  5853:  5853 E/LSPosedFramework ] (com.miui.weather2)[com.sevtinge.hyperceiler,HyperCeiler,16dd-19f9c2c6725-2-1,0,1] [SetDeviceLevel]: class is null
+[ 2026-07-26T10:06:26.717    10203:  4715:  4715 I/LSPosedFramework ] (com.android.systemui)[com.lidesheng.hyperlyric,HyperLyric,126b-19f9c2c560c-2-17,0,1] [LyriconSource] 订阅连接已建立
+[ 2026-07-26T10:06:26.718    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-18,0,1] received bluetooth broadcast: action=android.bluetooth.device.action.BATTERY_LEVEL_CHANGED enabled=true showDeviceName=true stored=false
+[ 2026-07-26T10:06:26.719    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-19,0,1] resolve bluetooth device name: resolved=Xiaomi Focus Pen fromDevice=Xiaomi Focus Pen fromCache=null address=70:61:EE:B4:CD:04
+[ 2026-07-26T10:06:26.719    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-1a,0,1] bluetooth battery broadcast: battery=100 key=70:61:EE:B4:CD:04 deviceName=Xiaomi Focus Pen pendingNameRefresh=false
+[ 2026-07-26T10:06:26.719    10203:  4715:  4715 W/LSPosedFramework ] (com.android.systemui)[io.github.hyperisland,HyperIsland[BluetoothIsland],126b-19f9c2c560c-2-1b,0,1] skip bluetooth battery update: connected=false battery=100 key=70:61:EE:B4:CD:04
+[ 2026-07-26T10:06:28.311     1000:  6416:  6416 I/LSPosedFramework ] (com.miui.securitycenter.bootaware)[com.example.miuilight,XposedBridge,1910-19f9c2c79d7-2-1,0,1] MiuiLightHook: hooked d9.a#a(Context,int)
+[ 2026-07-26T10:06:28.314     1000:  6416:  6416 I/LSPosedFramework ] (com.miui.securitycenter.bootaware)[com.example.miuilight,XposedBridge,1910-19f9c2c79d7-2-2,0,1] MiuiLightHook: proxy hooks installed in com.miui.securitycenter
+[ 2026-07-26T10:06:33.139    10288:  7921:  7921 I/LSPosedFramework ] (com.netease.cloudmusic)[io.github.proify.lyricon.cmprovider,XposedBridge,1ef1-19f9c2c8cb3-2-1,0,1] [CloudMusicProvider][D][com.netease.cloudmusic] Hooking com.netease.cloudmusic
+[ 2026-07-26T10:06:33.157    10288:  7921:  7921 I/LSPosedFramework ] (com.netease.cloudmusic)[io.github.proify.lyricon.cmprovider,XposedBridge,1ef1-19f9c2c8cb3-2-2,0,1] [CloudMusicProvider][D][com.netease.cloudmusic] Hooking, processName= com.netease.cloudmusic
+[ 2026-07-26T10:06:34.087     1000:  8651:  8651 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21cb-19f9c2c905f-2-1,0,1] MiuiLightHook: hooked d9.a#a(Context,int)
+[ 2026-07-26T10:06:34.102     1000:  8651:  8651 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21cb-19f9c2c905f-2-2,0,1] MiuiLightHook: proxy hooks installed in com.miui.securitycenter
+[ 2026-07-26T10:06:37.330     1000:  8651: 10957 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21cb-19f9c2c905f-92-3,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon args=[-16776192, com.miui.securitycenter, 7, 0] takeover=true
+[ 2026-07-26T10:06:38.027     1000: 10879: 10879 I/LSPosedFramework ] (com.miui.securitycenter)[com.example.miuilight,XposedBridge,2a7f-19f9c2c9fca-2-1,0,1] MiuiLightHook: hooked d9.a#a(Context,int)
+[ 2026-07-26T10:06:38.036     1000: 10879: 10879 I/LSPosedFramework ] (com.miui.securitycenter)[com.example.miuilight,XposedBridge,2a7f-19f9c2c9fca-2-2,0,1] MiuiLightHook: proxy hooks installed in com.miui.securitycenter
+[ 2026-07-26T10:06:40.547     1000:  8651: 10957 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21cb-19f9c2c905f-92-4,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon args=[0, com.miui.securitycenter, 7, 0] takeover=true
+[ 2026-07-26T10:06:41.554    10323: 12745: 12904 I/LSPosedFramework ] (com.example.miuilight)[com.example.miuilight,XposedBridge,31c9-19f9c2cad85-3c-1,0,1] MiuiLightHook: proxy hooks installed in com.miui.contentcatcher
+[ 2026-07-26T10:06:46.977     1000: 14936: 14936 I/LSPosedFramework ] (miui.systemui.plugin:flashlight)[com.lidesheng.hyperlyric,HyperLyric,3a58-19f9c2cc2c0-2-1,0,1] [HookEntry] 模块加载完成，当前应用版本1934-6.5
+[ 2026-07-26T10:06:53.227     1000:  8651: 10957 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21cb-19f9c2c905f-92-5,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon args=[-16776192, com.miui.securitycenter, 7, 0] takeover=true
+[ 2026-07-26T10:06:53.405     1000: 16501: 16501 I/LSPosedFramework ] (miui.systemui.plugin:flashlight)[com.lidesheng.hyperlyric,HyperLyric,4075-19f9c2cdbdd-2-1,0,1] [HookEntry] 模块加载完成，当前应用版本1934-6.5
+[ 2026-07-26T10:06:56.213     1000:  8651: 10957 I/LSPosedFramework ] (com.miui.securitycenter.remote)[com.example.miuilight,XposedBridge,21cb-19f9c2c905f-92-6,0,1] MiuiLightHook: LIGHT com.miui.securitycenter setColorCommon args=[0, com.miui.securitycenter, 7, 0] takeover=true

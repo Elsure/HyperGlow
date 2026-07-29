@@ -1,0 +1,6 @@
+id=miuilight_daemon
+name=MiuiLight Daemon
+version=v1.0.0
+versionCode=1
+author=elsur
+description=Root RGB LED enforcer for MiuiLightController. Holds the app color/breathing and beats the HyperOS camera privacy-light override at the sysfs level.

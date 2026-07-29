@@ -1,0 +1,9 @@
+author=Rem01Gaming
+banner=banner.webp
+description=[😋 Tweaks applied successfully] Special performance module for your Device.
+id=encore
+name=Encore Tweaks
+updateJson=https://encore.rem01gaming.dev/api/update.json
+version=5.2.1 (1533-361ab0e-main)
+versionCode=1533
+webuiIcon=webroot/icon.webp

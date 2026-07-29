@@ -1,0 +1,35 @@
+# Add project specific R8 rules here.
+# AGP will combine all keep rule files in src/main/keepRules to pass to R8
+#
+# For more details, see
+#   https://d.android.com/r/tools/r8/keep-rules
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+# ---- HyperGlow: Xposed/LSPosed module keep rules ----
+# The entry class is loaded BY NAME from assets/xposed_init and its callbacks are invoked
+# reflectively by LSPosed; R8 must never rename or strip the hook package.
+-keep class com.elsure.hyperglow.hook.** { *; }
+# Xposed API is provided by the LSPosed runtime (compileOnly); don't warn on it.
+-keep class de.robv.android.xposed.** { *; }
+-dontwarn de.robv.android.xposed.**
+# EventProvider / MainActivity are kept automatically via the manifest.
+# Release minify is ON (optimization.enable=true). A minified build MUST be verified on-device:
+# LSPosed failing to load the module does not surface as a crash, only as "nothing happens".
+
+# --- entry points reached by name / by the system, not by our own code ---
+# Services and the provider are declared in the manifest (AGP keeps those), but spelling them out
+# keeps the intent explicit if the manifest is ever refactored.
+-keep class com.elsure.hyperglow.HyperGlowNotificationListener { *; }
+-keep class com.elsure.hyperglow.LightForegroundService { *; }
+-keep class com.elsure.hyperglow.TriggerService { *; }
+-keep class com.elsure.hyperglow.EventProvider { *; }
+
+# LightHook reaches back into the app process through these; keep their shapes stable.
+-keepclassmembers class com.elsure.hyperglow.LightController { public *; }
+-keepclassmembers class com.elsure.hyperglow.NotifStore { public *; }
+-keepclassmembers class com.elsure.hyperglow.TriggerStore { public *; }

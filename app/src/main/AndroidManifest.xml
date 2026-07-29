@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <!-- Needed to list installed apps for the trigger rule picker (Android 11+ visibility). -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:enableOnBackInvokedCallback="true"
+        android:theme="@style/Theme.HyperGlow"
+        android:label="@string/app_name">
+
+        <!-- Xposed module metadata (this app is ALSO an LSPosed module). -->
+        <meta-data android:name="xposedmodule" android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Deactivate HyperOS stock light policy and own the RGB LED (companion to this app's UI)" />
+        <meta-data android:name="xposedminversion" android:value="82" />
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/xposed_scope" />
+
+        <!-- Receives light events from the in-app Xposed module (hook -> binder IPC). -->
+        <provider
+            android:name=".EventProvider"
+            android:authorities="com.elsure.hyperglow.events"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".LightForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="microphone|dataSync|mediaProjection" />
+
+        <service
+            android:name=".TriggerService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <service
+            android:name=".HyperGlowNotificationListener"
+            android:exported="true"
+            android:label="HyperGlow 通知灯效"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

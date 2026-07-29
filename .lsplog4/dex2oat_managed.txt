@@ -1,0 +1,506 @@
+>>>>> Dumping cursor [pkg, apk_path, odex_path, odex_mtime]
+0 {
+   pkg=com.miui.home
+   apk_path=/product/priv-app/MiuiHome/MiuiHome.apk
+   odex_path=/data/dalvik-cache/arm64/product@priv-app@MiuiHome@MiuiHome.apk@classes.dex
+   odex_mtime=1784460089141
+}
+1 {
+   pkg=com.netease.cloudmusic
+   apk_path=/product/data-app/com.netease.cloudmusic/com.netease.cloudmusic.apk
+   odex_path=/data/dalvik-cache/arm64/product@data-app@com.netease.cloudmusic@com.netease.cloudmusic.apk@classes.dex
+   odex_mtime=1784461573693
+}
+2 {
+   pkg=com.miui.mishare.connectivity
+   apk_path=/product/priv-app/MIShare/MIShare.apk
+   odex_path=/data/dalvik-cache/arm64/product@priv-app@MIShare@MIShare.apk@classes.dex
+   odex_mtime=1784477619213
+}
+3 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/split-XiaomiServiceFrameworkCN-master.apk
+   odex_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/oat/arm64/split-XiaomiServiceFrameworkCN-master.odex
+   odex_mtime=1784485898805
+}
+4 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/split_atom.apk
+   odex_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/oat/arm64/split_atom.odex
+   odex_mtime=1784485899029
+}
+5 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/auth-master.apk
+   odex_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/oat/arm64/auth-master.odex
+   odex_mtime=1784485899269
+}
+6 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/split_mimobile.apk
+   odex_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/oat/arm64/split_mimobile.odex
+   odex_mtime=1784485899553
+}
+7 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/prefetch-master.apk
+   odex_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/oat/arm64/prefetch-master.odex
+   odex_mtime=1784485899773
+}
+8 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/screen_recorder-master.apk
+   odex_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/oat/arm64/screen_recorder-master.odex
+   odex_mtime=1784485900001
+}
+9 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/uninstall_relogin-master.apk
+   odex_path=/data/app/~~MI1Iln-7dE3lvnTrEJCCuw==/com.xiaomi.xmsf-IdMS7-8vl5UtFDGyJHJplw==/oat/arm64/uninstall_relogin-master.odex
+   odex_mtime=1784485900209
+}
+10 {
+   pkg=com.miui.contentcatcher
+   apk_path=/product/app/ContentCatcherOS3_1/ContentCatcherOS3_1.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@ContentCatcherOS3_1@ContentCatcherOS3_1.apk@classes.dex
+   odex_mtime=1784485907313
+}
+11 {
+   pkg=com.google.android.webview
+   apk_path=/product/app/WebViewGoogle64/WebViewGoogle64.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@WebViewGoogle64@WebViewGoogle64.apk@classes.dex
+   odex_mtime=1784485907605
+}
+12 {
+   pkg=com.miui.notes
+   apk_path=/data/app/~~J2NqUuioZJsmBtYxZNuLtg==/com.miui.notes-zMSS0g0lzjy6fR1tV_GMcA==/base.apk
+   odex_path=/data/app/~~J2NqUuioZJsmBtYxZNuLtg==/com.miui.notes-zMSS0g0lzjy6fR1tV_GMcA==/oat/arm64/base.odex
+   odex_mtime=1784485912545
+}
+13 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/split_AdsDynamite_installtime.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/split_AdsDynamite_installtime.odex
+   odex_mtime=1784485918641
+}
+14 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/split_DynamiteLoader_installtime.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/split_DynamiteLoader_installtime.odex
+   odex_mtime=1784485919157
+}
+15 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/split_DynamiteModulesA_installtime.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/split_DynamiteModulesA_installtime.odex
+   odex_mtime=1784485919369
+}
+16 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/split_DynamiteModulesC_installtime.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/split_DynamiteModulesC_installtime.odex
+   odex_mtime=1784485919601
+}
+17 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/split_GoogleCertificates_installtime.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/split_GoogleCertificates_installtime.odex
+   odex_mtime=1784485919837
+}
+18 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/split_MapsDynamite_installtime.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/split_MapsDynamite_installtime.odex
+   odex_mtime=1784485920069
+}
+19 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/split_MeasurementDynamite_installtime.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/split_MeasurementDynamite_installtime.odex
+   odex_mtime=1784485920305
+}
+20 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/split_maps_core_dynamite_ondemand.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/split_maps_core_dynamite_ondemand.odex
+   odex_mtime=1784485920629
+}
+21 {
+   pkg=com.miui.aod
+   apk_path=/product/priv-app/MIUIAod/MIUIAod.apk
+   odex_path=/data/dalvik-cache/arm64/product@priv-app@MIUIAod@MIUIAod.apk@classes.dex
+   odex_mtime=1784485927213
+}
+22 {
+   pkg=com.android.calendar
+   apk_path=/data/app/~~IieWFC4MRdZk_qOP1uSu6w==/com.android.calendar-Gy16F8bwl6QRZoJ0bFXMtA==/base.apk
+   odex_path=/data/app/~~IieWFC4MRdZk_qOP1uSu6w==/com.android.calendar-Gy16F8bwl6QRZoJ0bFXMtA==/oat/arm64/base.odex
+   odex_mtime=1784485928005
+}
+23 {
+   pkg=com.android.thememanager
+   apk_path=/data/app/~~_UZM-2DtRLXMiJgYDi0xTg==/com.android.thememanager-mGcUcWF_KZRqEUEBDnsvKw==/base.apk
+   odex_path=/data/app/~~_UZM-2DtRLXMiJgYDi0xTg==/com.android.thememanager-mGcUcWF_KZRqEUEBDnsvKw==/oat/arm64/base.odex
+   odex_mtime=1784485929589
+}
+24 {
+   pkg=com.android.contacts
+   apk_path=/data/app/~~u04o8DmycDDT2kOivTQ9yQ==/com.android.contacts-ucO2dXnarUEogLU6x04bmg==/base.apk
+   odex_path=/data/app/~~u04o8DmycDDT2kOivTQ9yQ==/com.android.contacts-ucO2dXnarUEogLU6x04bmg==/oat/arm64/base.odex
+   odex_mtime=1784485932549
+}
+25 {
+   pkg=com.xiaomi.aiasst.vision
+   apk_path=/product/app/AiasstVision/AiasstVision.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@AiasstVision@AiasstVision.apk@classes.dex
+   odex_mtime=1784485933565
+}
+26 {
+   pkg=com.xiaomi.phone
+   apk_path=/system_ext/priv-app/HyperPhone/HyperPhone.apk
+   odex_path=/data/dalvik-cache/arm64/system_ext@priv-app@HyperPhone@HyperPhone.apk@classes.dex
+   odex_mtime=1784485937553
+}
+27 {
+   pkg=com.miui.mediaeditor
+   apk_path=/product/data-app/MiMediaEditor/MiMediaEditor.apk
+   odex_path=/data/dalvik-cache/arm64/product@data-app@MiMediaEditor@MiMediaEditor.apk@classes.dex
+   odex_mtime=1784485938489
+}
+28 {
+   pkg=com.android.soundrecorder
+   apk_path=/data/app/~~2R3f7D1eFNM0pvkG6WjC9w==/com.android.soundrecorder-sRB8ed0rjyURu1GVrFgTlg==/base.apk
+   odex_path=/data/app/~~2R3f7D1eFNM0pvkG6WjC9w==/com.android.soundrecorder-sRB8ed0rjyURu1GVrFgTlg==/oat/arm64/base.odex
+   odex_mtime=1784485939765
+}
+29 {
+   pkg=com.miui.packageinstaller
+   apk_path=/product/priv-app/MIUIPackageInstallerVariants/MIUIPackageInstallerVariants.apk
+   odex_path=/data/dalvik-cache/arm64/product@priv-app@MIUIPackageInstallerVariants@MIUIPackageInstallerVariants.apk@classes.dex
+   odex_mtime=1784485942345
+}
+30 {
+   pkg=com.miui.screenrecorder
+   apk_path=/data/app/~~zg9J6FMxk2Mb9xmlwQx36Q==/com.miui.screenrecorder-mrrfhrvgCbvPJXp9OehPfw==/base.apk
+   odex_path=/data/app/~~zg9J6FMxk2Mb9xmlwQx36Q==/com.miui.screenrecorder-mrrfhrvgCbvPJXp9OehPfw==/oat/arm64/base.odex
+   odex_mtime=1784485945713
+}
+31 {
+   pkg=miui.systemui.plugin
+   apk_path=/product/app/MIUISystemUIPlugin/MIUISystemUIPlugin.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@MIUISystemUIPlugin@MIUISystemUIPlugin.apk@classes.dex
+   odex_mtime=1784485949169
+}
+32 {
+   pkg=com.xiaomi.misettings
+   apk_path=/data/app/~~o03KzyOSc8aLRNH5lsrZMw==/com.xiaomi.misettings-dKrmgI6_yD7S6wAXRZZdzA==/base.apk
+   odex_path=/data/app/~~o03KzyOSc8aLRNH5lsrZMw==/com.xiaomi.misettings-dKrmgI6_yD7S6wAXRZZdzA==/oat/arm64/base.odex
+   odex_mtime=1784485951509
+}
+33 {
+   pkg=com.miui.screenshot
+   apk_path=/data/app/~~6tkEgYdtrhHrL1LuQ0AVHA==/com.miui.screenshot-82jnmgDxw-c1J9iG-NwB9Q==/base.apk
+   odex_path=/data/app/~~6tkEgYdtrhHrL1LuQ0AVHA==/com.miui.screenshot-82jnmgDxw-c1J9iG-NwB9Q==/oat/arm64/base.odex
+   odex_mtime=1784485952941
+}
+34 {
+   pkg=com.android.providers.downloads.ui
+   apk_path=/product/data-app/DownloadProviderUiPad/DownloadProviderUiPad.apk
+   odex_path=/data/dalvik-cache/arm64/product@data-app@DownloadProviderUiPad@DownloadProviderUiPad.apk@classes.dex
+   odex_mtime=1784485954177
+}
+35 {
+   pkg=com.netease.cloudmusic
+   apk_path=/data/app/~~r8516X2ikbPlHW0im-T7sw==/com.netease.cloudmusic-1scHyCCjccTOn71n0vG0SA==/base.apk
+   odex_path=/data/app/~~r8516X2ikbPlHW0im-T7sw==/com.netease.cloudmusic-1scHyCCjccTOn71n0vG0SA==/oat/arm64/base.odex
+   odex_mtime=1784485967329
+}
+36 {
+   pkg=com.android.updater
+   apk_path=/product/app/Updater/Updater.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@Updater@Updater.apk@classes.dex
+   odex_mtime=1784485982837
+}
+37 {
+   pkg=com.xiaomi.joyose
+   apk_path=/system/app/Joyose/Joyose.apk
+   odex_path=/data/dalvik-cache/arm64/system@app@Joyose@Joyose.apk@classes.dex
+   odex_mtime=1784485984249
+}
+38 {
+   pkg=com.miui.personalassistant
+   apk_path=/product/priv-app/MIUIPersonalAssistantPadOS3/MIUIPersonalAssistantPadOS3.apk
+   odex_path=/data/dalvik-cache/arm64/product@priv-app@MIUIPersonalAssistantPadOS3@MIUIPersonalAssistantPadOS3.apk@classes.dex
+   odex_mtime=1784485986401
+}
+39 {
+   pkg=com.android.providers.telephony
+   apk_path=/system/priv-app/TelephonyProvider/TelephonyProvider.apk
+   odex_path=/data/dalvik-cache/arm64/system@priv-app@TelephonyProvider@TelephonyProvider.apk@classes.dex
+   odex_mtime=1784485990333
+}
+40 {
+   pkg=com.android.systemui
+   apk_path=/system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk
+   odex_path=/data/dalvik-cache/arm64/system_ext@priv-app@MiuiSystemUI@MiuiSystemUI.apk@classes.dex
+   odex_mtime=1784485994609
+}
+41 {
+   pkg=com.miui.miwallpaper
+   apk_path=/product/app/WallpaperOS3/WallpaperOS3.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@WallpaperOS3@WallpaperOS3.apk@classes.dex
+   odex_mtime=1784485995713
+}
+42 {
+   pkg=com.xiaomi.scanner
+   apk_path=/product/data-app/MiuiScanner/MiuiScanner.apk
+   odex_path=/data/dalvik-cache/arm64/product@data-app@MiuiScanner@MiuiScanner.apk@classes.dex
+   odex_mtime=1784485996945
+}
+43 {
+   pkg=com.miui.backup
+   apk_path=/data/app/~~81q4be1WrHwCSKCqBEqcZQ==/com.miui.backup-i2_PF5IbS0QxJkofRxVvdQ==/base.apk
+   odex_path=/data/app/~~81q4be1WrHwCSKCqBEqcZQ==/com.miui.backup-i2_PF5IbS0QxJkofRxVvdQ==/oat/arm64/base.odex
+   odex_mtime=1784485998141
+}
+44 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/split_mimobile.apk
+   odex_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/oat/arm64/split_mimobile.odex
+   odex_mtime=1784527784188
+}
+45 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/prefetch-master.apk
+   odex_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/oat/arm64/prefetch-master.odex
+   odex_mtime=1784527784452
+}
+46 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/screen_recorder-master.apk
+   odex_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/oat/arm64/screen_recorder-master.odex
+   odex_mtime=1784527784684
+}
+47 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/uninstall_relogin-master.apk
+   odex_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/oat/arm64/uninstall_relogin-master.odex
+   odex_mtime=1784527784928
+}
+48 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/GmsCore.apk
+   odex_path=/data/app/~~evDn47gtWTwHi5eAxRoqgA==/com.google.android.gms-XKNAYSG67J42ztrgzNBaJw==/oat/arm64/GmsCore.odex
+   odex_mtime=1784527789896
+}
+49 {
+   pkg=com.miui.weather2
+   apk_path=/product/data-app/MIUIWeather/MIUIWeather.apk
+   odex_path=/data/dalvik-cache/arm64/product@data-app@MIUIWeather@MIUIWeather.apk@classes.dex
+   odex_mtime=1784527801696
+}
+50 {
+   pkg=com.miui.cloudservice
+   apk_path=/product/app/MIUICloudService/MIUICloudService.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@MIUICloudService@MIUICloudService.apk@classes.dex
+   odex_mtime=1784527802100
+}
+51 {
+   pkg=com.miui.gallery
+   apk_path=/data/app/~~eOHrY7tirsB-n1vksPQesA==/com.miui.gallery-r942VVjhmTWgZkm158543Q==/base.apk
+   odex_path=/data/app/~~eOHrY7tirsB-n1vksPQesA==/com.miui.gallery-r942VVjhmTWgZkm158543Q==/oat/arm64/base.odex
+   odex_mtime=1784527804464
+}
+52 {
+   pkg=com.xiaomi.vipaccount
+   apk_path=/product/data-app/OS2VipAccountPad/OS2VipAccountPad.apk
+   odex_path=/data/dalvik-cache/arm64/product@data-app@OS2VipAccountPad@OS2VipAccountPad.apk@classes.dex
+   odex_mtime=1784527806232
+}
+53 {
+   pkg=com.android.providers.downloads
+   apk_path=/system/priv-app/DownloadProvider/DownloadProvider.apk
+   odex_path=/data/dalvik-cache/arm64/system@priv-app@DownloadProvider@DownloadProvider.apk@classes.dex
+   odex_mtime=1784527814752
+}
+54 {
+   pkg=com.xiaomi.mirror
+   apk_path=/product/priv-app/MirrorOS3/MirrorOS3.apk
+   odex_path=/data/dalvik-cache/arm64/product@priv-app@MirrorOS3@MirrorOS3.apk@classes.dex
+   odex_mtime=1784527816896
+}
+55 {
+   pkg=com.android.fileexplorer
+   apk_path=/data/app/~~-Pt1j_Y3gV_6PK63JEwwcQ==/com.android.fileexplorer-NlgZfCZUb6zAYTZTFUbkQQ==/base.apk
+   odex_path=/data/app/~~-Pt1j_Y3gV_6PK63JEwwcQ==/com.android.fileexplorer-NlgZfCZUb6zAYTZTFUbkQQ==/oat/arm64/base.odex
+   odex_mtime=1784527820804
+}
+56 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~Hx4n3BDsJcW5ojduEpDkag==/com.google.android.gms-muYxBN85CHJyhic2LWE4jQ==/split_CronetDynamite_installtime.apk
+   odex_path=/data/app/~~Hx4n3BDsJcW5ojduEpDkag==/com.google.android.gms-muYxBN85CHJyhic2LWE4jQ==/oat/arm64/split_CronetDynamite_installtime.odex
+   odex_mtime=1784545750402
+}
+57 {
+   pkg=com.google.android.webview
+   apk_path=/data/app/~~fDG63AMVXGFKmVMHAebcVQ==/com.google.android.webview-7RA1rcGcrUgKM-joR2KQ7g==/base.apk
+   odex_path=/data/app/~~fDG63AMVXGFKmVMHAebcVQ==/com.google.android.webview-7RA1rcGcrUgKM-joR2KQ7g==/oat/arm64/base.odex
+   odex_mtime=1784545756250
+}
+58 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~Hx4n3BDsJcW5ojduEpDkag==/com.google.android.gms-muYxBN85CHJyhic2LWE4jQ==/split_AdsDynamite_installtime.apk
+   odex_path=/data/app/~~Hx4n3BDsJcW5ojduEpDkag==/com.google.android.gms-muYxBN85CHJyhic2LWE4jQ==/oat/arm64/split_AdsDynamite_installtime.odex
+   odex_mtime=1784545758502
+}
+59 {
+   pkg=com.android.server.telecom
+   apk_path=/system/priv-app/Telecom/Telecom.apk
+   odex_path=/data/dalvik-cache/arm64/system@priv-app@Telecom@Telecom.apk@classes.dex
+   odex_mtime=1784569272478
+}
+60 {
+   pkg=com.miui.guardprovider
+   apk_path=/data/app/~~R0hz6-4mCj5IjXvnoXz2lg==/com.miui.guardprovider-9NYh8XnXyCLZwFo0uaYcHA==/base.apk
+   odex_path=/data/app/~~R0hz6-4mCj5IjXvnoXz2lg==/com.miui.guardprovider-9NYh8XnXyCLZwFo0uaYcHA==/oat/arm64/base.odex
+   odex_mtime=1784569273170
+}
+61 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/split_atom.apk
+   odex_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/oat/arm64/split_atom.odex
+   odex_mtime=1784569273730
+}
+62 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/auth-master.apk
+   odex_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/oat/arm64/auth-master.odex
+   odex_mtime=1784569274046
+}
+63 {
+   pkg=com.android.camera
+   apk_path=/product/priv-app/MiuiCamera/MiuiCamera.apk
+   odex_path=/data/dalvik-cache/arm64/product@priv-app@MiuiCamera@MiuiCamera.apk@classes.dex
+   odex_mtime=1784569275354
+}
+64 {
+   pkg=com.miui.analytics
+   apk_path=/data/app/~~7k1NtEimq-l-elOK5uSSFw==/com.miui.analytics-XFyXcKbZspe8uTJz87hBNA==/base.apk
+   odex_path=/data/app/~~7k1NtEimq-l-elOK5uSSFw==/com.miui.analytics-XFyXcKbZspe8uTJz87hBNA==/oat/arm64/base.odex
+   odex_mtime=1784569280526
+}
+65 {
+   pkg=com.miui.phrase
+   apk_path=/product/app/MIUIFrequentPhrase/MIUIFrequentPhrase.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@MIUIFrequentPhrase@MIUIFrequentPhrase.apk@classes.dex
+   odex_mtime=1784683480523
+}
+66 {
+   pkg=com.miui.securitycenter
+   apk_path=/data/app/~~IkfHRTtnl2swl4-ZwlL7lg==/com.miui.securitycenter-khBvfysKkdTagMIn-PDLjQ==/base.apk
+   odex_path=/data/app/~~IkfHRTtnl2swl4-ZwlL7lg==/com.miui.securitycenter-khBvfysKkdTagMIn-PDLjQ==/oat/arm64/base.odex
+   odex_mtime=1784769729506
+}
+67 {
+   pkg=com.miui.creation
+   apk_path=/data/app/~~G1Dkr7qfXFBz6JrXsRAKkg==/com.miui.creation-UcEVKXbQq45cp2D4Wn8oyw==/base.apk
+   odex_path=/data/app/~~G1Dkr7qfXFBz6JrXsRAKkg==/com.miui.creation-UcEVKXbQq45cp2D4Wn8oyw==/oat/arm64/base.odex
+   odex_mtime=1784856086729
+}
+68 {
+   pkg=com.xiaomi.aicr
+   apk_path=/product/priv-app/MIUIAICR/MIUIAICR.apk
+   odex_path=/data/dalvik-cache/arm64/product@priv-app@MIUIAICR@MIUIAICR.apk@classes.dex
+   odex_mtime=1784856101809
+}
+69 {
+   pkg=com.xiaomi.market
+   apk_path=/product/app/MIUISuperMarketPad/MIUISuperMarketPad.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@MIUISuperMarketPad@MIUISuperMarketPad.apk@classes.dex
+   odex_mtime=1784856103765
+}
+70 {
+   pkg=com.android.phone
+   apk_path=/system/priv-app/TeleService/TeleService.apk
+   odex_path=/data/dalvik-cache/arm64/system@priv-app@TeleService@TeleService.apk@classes.dex
+   odex_mtime=1784856106013
+}
+71 {
+   pkg=com.milink.service
+   apk_path=/product/app/MiLinkOS3Cn/MiLinkOS3Cn.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@MiLinkOS3Cn@MiLinkOS3Cn.apk@classes.dex
+   odex_mtime=1784898091758
+}
+72 {
+   pkg=com.miui.misound
+   apk_path=/product/app/MiSound/MiSound.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@MiSound@MiSound.apk@classes.dex
+   odex_mtime=1784898094198
+}
+73 {
+   pkg=com.xiaomi.xmsf
+   apk_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/split-XiaomiServiceFrameworkCN-master.apk
+   odex_path=/data/app/~~39tcDPCMJFxRTgmweJSIuA==/com.xiaomi.xmsf-v5l8I4FdWiAvdkudNa5Pqw==/oat/arm64/split-XiaomiServiceFrameworkCN-master.odex
+   odex_mtime=1784898103934
+}
+74 {
+   pkg=com.lbe.security.miui
+   apk_path=/system_ext/priv-app/AuthManager/AuthManager.apk
+   odex_path=/data/dalvik-cache/arm64/system_ext@priv-app@AuthManager@AuthManager.apk@classes.dex
+   odex_mtime=1784898111154
+}
+75 {
+   pkg=com.miui.powerkeeper
+   apk_path=/system_ext/app/PowerKeeper/PowerKeeper.apk
+   odex_path=/data/dalvik-cache/arm64/system_ext@app@PowerKeeper@PowerKeeper.apk@classes.dex
+   odex_mtime=1784898111522
+}
+76 {
+   pkg=com.sohu.inputmethod.sogou.xiaomi
+   apk_path=/product/app/SogouIME/SogouIME.apk
+   odex_path=/data/dalvik-cache/arm64/product@app@SogouIME@SogouIME.apk@classes.dex
+   odex_mtime=1784898115370
+}
+77 {
+   pkg=com.duokan.phone.remotecontroller
+   apk_path=/product/data-app/XMRemoteController/XMRemoteController.apk
+   odex_path=/data/dalvik-cache/arm64/product@data-app@XMRemoteController@XMRemoteController.apk@classes.dex
+   odex_mtime=1784991355639
+}
+78 {
+   pkg=com.google.android.gms
+   apk_path=/data/app/~~Hx4n3BDsJcW5ojduEpDkag==/com.google.android.gms-muYxBN85CHJyhic2LWE4jQ==/base.apk
+   odex_path=/data/app/~~Hx4n3BDsJcW5ojduEpDkag==/com.google.android.gms-muYxBN85CHJyhic2LWE4jQ==/oat/arm64/base.odex
+   odex_mtime=1784991363331
+}
+79 {
+   pkg=com.miui.analytics
+   apk_path=/data/app/~~iN4uVPJ2PQDMmScSlRilew==/com.miui.analytics-g4bgGFbsdUb2igqvcTf0Mw==/base.apk
+   odex_path=/data/app/~~iN4uVPJ2PQDMmScSlRilew==/com.miui.analytics-g4bgGFbsdUb2igqvcTf0Mw==/oat/arm64/base.odex
+   odex_mtime=1784991365419
+}
+80 {
+   pkg=com.example.miuilight
+   apk_path=/data/app/~~MA13i40IAHUp-zi7XNaYNw==/com.example.miuilight-RwL9SgPGikUNxFRnRFy-OA==/base.apk
+   odex_path=/data/app/~~MA13i40IAHUp-zi7XNaYNw==/com.example.miuilight-RwL9SgPGikUNxFRnRFy-OA==/oat/arm64/base.odex
+   odex_mtime=1784994619507
+}
+81 {
+   pkg=com.example.miuilight
+   apk_path=/data/app/~~COnl_4WtTMHkRP4B0gWIVw==/com.example.miuilight-DU3eynxzfY0k_N1P6K2oLg==/base.apk
+   odex_path=/data/app/~~COnl_4WtTMHkRP4B0gWIVw==/com.example.miuilight-DU3eynxzfY0k_N1P6K2oLg==/oat/arm64/base.odex
+   odex_mtime=1784996792183
+}
+82 {
+   pkg=com.android.settings
+   apk_path=/system_ext/priv-app/Settings/Settings.apk
+   odex_path=/data/dalvik-cache/arm64/system_ext@priv-app@Settings@Settings.apk@classes.dex
+   odex_mtime=1785034501699
+}
+83 {
+   pkg=com.example.miuilight
+   apk_path=/data/app/~~geT_syk7ROgnxuSXGBUXkw==/com.example.miuilight-M4YVU1DE_DWjhjm163yRLw==/base.apk
+   odex_path=/data/app/~~geT_syk7ROgnxuSXGBUXkw==/com.example.miuilight-M4YVU1DE_DWjhjm163yRLw==/oat/arm64/base.odex
+   odex_mtime=1785040048085
+}
+<<<<<

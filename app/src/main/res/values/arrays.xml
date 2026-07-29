@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      LSPosed scope for the Xposed half of this app. Confirm/select these in the LSPosed manager
+      UI (Modules -> Miui Light Controller -> scope; enable "show system apps" to find
+      securitycenter), then REBOOT. The manifest scope is only a first-install hint on some forks.
+    -->
+    <string-array name="xposed_scope">
+        <item>system</item>
+        <item>com.miui.securitycenter</item>
+    </string-array>
+</resources>

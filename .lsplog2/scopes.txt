@@ -1,0 +1,765 @@
+io.github.proify.lyricon.cmprovider/10301
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.sohu.inputmethod.sogou.xiaomi:patch/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.sohu.inputmethod.sogou.xiaomi/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.android.systemui:tuner/10203
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+	io.github.proify.lyricon.core
+		io.github.proify.lyricon.core.xposed.HookEntry
+com.xiaomi.joyose:gunsight_service/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.android.fileexplorer:miuiplus/10156
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.notes:task/10269
+	com.sevtinge.hyperceiler
+		jp0
+com.duokan.phone.remotecontroller/10284
+	com.sevtinge.hyperceiler
+		jp0
+com.android.systemui:fgservices/10203
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+	io.github.proify.lyricon.core
+		io.github.proify.lyricon.core.xposed.HookEntry
+com.android.fileexplorer:widgetProvider/10156
+	com.sevtinge.hyperceiler
+		jp0
+com.duokan.phone.remotecontroller:newinst/10284
+	com.sevtinge.hyperceiler
+		jp0
+com.android.browser:webapps/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:dataMiningService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.mediaeditor:photo_editor/10275
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aiasst.vision:widgetProvider/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:browser/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.miui.personalassistant:uploadLogProcess/10130
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:AlertDialogActivity/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.milink.service.persistent/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:instruction/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.gallery:appcustom/10264
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:fileProvider/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.backup/1000
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.miui.securityadd/10159
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:screenAlgoService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.android.settings:remote/1000
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.miui.securitycenter/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.example.miuilight
+		com.example.miuilight.hook.LightHook
+com.xiaomi.mtb/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.android.browser/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.creation:sync/10254
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.mediaeditor:editor_service/10275
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:GlobalModelAlgo/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.securitycenter:ui/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.example.miuilight
+		com.example.miuilight.hook.LightHook
+com.android.systemui:appclips.screenshot/10203
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+	io.github.proify.lyricon.core
+		io.github.proify.lyricon.core.xposed.HookEntry
+com.android.browser:bytelive/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.android.phone/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.android.browser:downloader/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.milink.service:pushservice/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.android.phone/1001
+	com.sevtinge.hyperceiler
+		jp0
+com.android.calendar/10256
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:cognitionService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.cloudservice:galleryproxy/10153
+	com.sevtinge.hyperceiler
+		jp0
+android.process.mediaUI/10252
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:thirdpartyactionprovider/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.android.systemui:sweetsweetdesserts/10203
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+	io.github.proify.lyricon.core
+		io.github.proify.lyricon.core.xposed.HookEntry
+com.lbe.security.miui/10193
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:pushservice/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.xiaomi.aiasst.vision/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.miwallpaper:settings/10180
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.backup/6100
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.guardprovider:ai/10155
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:bertAlgo/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.android.htmlviewer:pushservice/10092
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:llmBaseService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.gallery:photo_editor/10264
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.cloudservice:cloudkit/10153
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:download/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.voicetrigger/10179
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.misettings:remote/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.android.browser:fullsearch/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:perceptionService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.scanner/10280
+	com.sevtinge.hyperceiler
+		jp0
+com.android.systemui/10203
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+	io.github.proify.lyricon.core
+		io.github.proify.lyricon.core.xposed.HookEntry
+com.android.settings/1000
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.miui.miwallpaper:daemon/10180
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.mirror/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.milink.service:provider/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:pushservice/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf:persistent/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.android.server.telecom:ui/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.android.browser:push/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.gallery/10264
+	com.sevtinge.hyperceiler
+		jp0
+com.example.miuilight/10323
+	com.example.miuilight
+		com.example.miuilight.hook.LightHook
+com.xiaomi.trustservice/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.milink.service:iot/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.phrase/10154
+	com.sevtinge.hyperceiler
+		jp0
+com.milink.crossdeviceservice.file/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.gallery:widgetProvider/10264
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:MemoryService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.android.camera:widgetProvider/10140
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.aod/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.miui.gallery:remote/10264
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.notes:widgetProvider/10269
+	com.sevtinge.hyperceiler
+		jp0
+com.android.thememanager:videowallpaper/6101
+	com.sevtinge.hyperceiler
+		jp0
+com.sohu.inputmethod.sogou.xiaomi:p0/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.milink.service/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf:passing/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.android.browser:widgetProvider/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.voicetrigger:playcore_missing_splits_activity/10179
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.market:guard/10160
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.mediaeditor:aicr_service/10275
+	com.sevtinge.hyperceiler
+		jp0
+miui.systemui.plugin/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+com.miui.notes/10269
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.screenshot/10158
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:coreService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:clipAlgo/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.mediaeditor:pushservice/10275
+	com.sevtinge.hyperceiler
+		jp0
+com.sohu.inputmethod.sogou.xiaomi:speech/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:leakcanary/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.milink.crossdeviceservice/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:searchDataService_ui/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.android.updater/6102
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.weather2:pushservice/10271
+	com.sevtinge.hyperceiler
+		jp0
+com.android.camera/10140
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.screenrecorder:core/10267
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:searchService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:nfcService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:actionproviderms/10124
+	com.sevtinge.hyperceiler
+		jp0
+miui.systemui.plugin:notification/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+com.android.fileexplorer:remote/10156
+	com.sevtinge.hyperceiler
+		jp0
+com.android.providers.downloads.ui:ad/10252
+	com.sevtinge.hyperceiler
+		jp0
+com.sohu.inputmethod.sogou.xiaomi:heap_analysis/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.misound/10167
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.vtcamera/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.notes:miuiplus/10269
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.packageinstaller/10129
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aiasst.vision:tss/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.powerkeeper/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:play/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.miui.securityadd.home/10159
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:mp5/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.xiaomi.vipaccount:widgetProvider/10281
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.mishare.connectivity/10123
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.misound:actionprovider/10167
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.market:pushservice/10160
+	com.sevtinge.hyperceiler
+		jp0
+system:ui/1000
+	com.example.miuilight
+		com.example.miuilight.hook.LightHook
+com.netease.cloudmusic:mp2/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.netease.cloudmusic:mp1/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.netease.cloudmusic:mp4/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.netease.cloudmusic:mp3/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.milink.service:subSystemHealth/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.misettings/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.vipaccount:web/10281
+	com.sevtinge.hyperceiler
+		jp0
+com.android.thememanager:keyguardeditor/6101
+	com.sevtinge.hyperceiler
+		jp0
+com.android.settings:pushservice/1000
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.android.browser:pushservice/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.securityadd:sdk/10159
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.backup:remote/6100
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.android.thememanager:mamldataprovider/6101
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.gallery:secret_transfer/10264
+	com.sevtinge.hyperceiler
+		jp0
+sogou.mobile.explorer.hotwords/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.vipaccount:pushservice/10281
+	com.sevtinge.hyperceiler
+		jp0
+com.android.fileexplorer/10156
+	com.sevtinge.hyperceiler
+		jp0
+com.milink.service:core/10168
+	com.sevtinge.hyperceiler
+		jp0
+android.process.media/10088
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.android.browser:phoenix/10127
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.aod:keyguardeditor/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.securitycenter.bootaware/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.example.miuilight
+		com.example.miuilight.hook.LightHook
+com.xiaomi.misettings:widgetProvider/1000
+	com.sevtinge.hyperceiler
+		jp0
+io.github.proify.lyricon.core/10302
+	io.github.proify.lyricon.core
+		io.github.proify.lyricon.core.xposed.HookEntry
+com.miui.cloudservice:dumplog/10153
+	com.sevtinge.hyperceiler
+		jp0
+com.android.soundrecorder/10270
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:actionprovider/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.lbe.security.miui:ui/10193
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.gallery:provideData/10264
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.joyose/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.sohu.inputmethod.sogou.xiaomi:remote/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.sohu.inputmethod.sogou.xiaomi:ac_checker/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.android.thememanager:pushservice/6101
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.creation/10254
+	com.sevtinge.hyperceiler
+		jp0
+com.android.htmlviewer:remote/10092
+	com.sevtinge.hyperceiler
+		jp0
+com.sohu.inputmethod.status/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:nim_coexist_core/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.miui.weather2/10271
+	com.sevtinge.hyperceiler
+		jp0
+com.android.systemui:screenshot/10203
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+	io.github.proify.lyricon.core
+		io.github.proify.lyricon.core.xposed.HookEntry
+com.xiaomi.aicr:iotProvider/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf:uploadLogProcess/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.xiaomi.xmsf:privacy/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.miui.personalassistant/10130
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:widgetProvider/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.miui.creation:task/10254
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.notes:sync/10269
+	com.sevtinge.hyperceiler
+		jp0
+android:ui/1000
+	com.example.miuilight
+		com.example.miuilight.hook.LightHook
+com.netease.cloudmusic:patch/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.miui.notes:remote/10269
+	com.sevtinge.hyperceiler
+		jp0
+com.sohu.inputmethod.sogou.xiaomi:rarely/10176
+	com.sevtinge.hyperceiler
+		jp0
+com.milink.service:ui/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.powerkeeper:ui/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.voicetrigger:pushservice/10179
+	com.sevtinge.hyperceiler
+		jp0
+com.android.soundrecorder:sync/10270
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr:searchDataService/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.android.htmlviewer/10092
+	com.sevtinge.hyperceiler
+		jp0
+com.milink.service:audio/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.cloudservice/10153
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.securitycenter.remote/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.example.miuilight
+		com.example.miuilight.hook.LightHook
+com.netease.cloudmusic:heap_analysis/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.xiaomi.xmsf:kit2/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.milink.runtime/10168
+	com.sevtinge.hyperceiler
+		jp0
+com.android.thememanager/6101
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf:kit8/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.miui.screenrecorder/10267
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf:kit9/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.xiaomi.xmsf:kit6/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.xiaomi.vipaccount/10281
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf:kit7/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.xiaomi.aicr:agentProvider/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf:kit0/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.miui.miwallpaper/10180
+	com.sevtinge.hyperceiler
+		jp0
+com.android.contacts/10128
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.mediaeditor/10275
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.guardprovider/10155
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.securitycenter:remote/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.example.miuilight
+		com.example.miuilight.hook.LightHook
+com.xiaomi.vipaccount:milink_ipc/10281
+	com.sevtinge.hyperceiler
+		jp0
+com.android.externalstorage/10090
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.mishare.connectivity:ui/10123
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.xmsf:services/10188
+	com.sevtinge.hyperceiler
+		jp0
+	io.github.hyperisland
+		io.github.hyperisland.xposed.HyperIslandModule
+com.miui.home/10141
+	com.sevtinge.hyperceiler
+		jp0
+com.android.calendar:widgetProvider/10256
+	com.sevtinge.hyperceiler
+		jp0
+miui.systemui.plugin:flashlight/1000
+	com.sevtinge.hyperceiler
+		jp0
+	com.lidesheng.hyperlyric
+		com.lidesheng.hyperlyric.root.HookEntry
+com.android.camera:pushservice/10140
+	com.sevtinge.hyperceiler
+		jp0
+com.android.soundrecorder:remote/10270
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.personalassistant:pushservice/10130
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.barrage/1000
+	com.sevtinge.hyperceiler
+		jp0
+com.netease.cloudmusic:safemode/10288
+	io.github.proify.lyricon.cmprovider
+		io.github.proify.lyricon.cmprovider.xposed.HookEntry_YukiHookXposedInit
+com.miui.screenshot:photo_editor/10158
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aicr/10124
+	com.sevtinge.hyperceiler
+		jp0
+com.android.camera:remote/10140
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.analytics/10145
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.cloudservice:factory/10153
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.market/10160
+	com.sevtinge.hyperceiler
+		jp0
+com.miui.notes:calc/10269
+	com.sevtinge.hyperceiler
+		jp0
+com.android.incallui/10122
+	com.sevtinge.hyperceiler
+		jp0
+com.xiaomi.aiasst.vision:state/1000
+	com.sevtinge.hyperceiler
+		jp0

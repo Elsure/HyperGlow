@@ -1,0 +1,30 @@
+>>>>> Dumping cursor [module_pkg_name, apk_path]
+0 {
+   module_pkg_name=io.github.hyperisland
+   apk_path=/data/app/~~0aByynFXaFcPUQTorCdCkQ==/io.github.hyperisland-36Tqn-nhkSudbpPt5SIR-Q==/base.apk
+}
+1 {
+   module_pkg_name=com.lidesheng.hyperlyric
+   apk_path=/data/app/~~v8TCmmi8UkQQ5D8oBv3tlQ==/com.lidesheng.hyperlyric-E_o74u4tsshflQkM44ljJQ==/base.apk
+}
+2 {
+   module_pkg_name=com.sevtinge.hyperceiler
+   apk_path=/data/app/~~rKSzdRmxeaj6rC7-LLHKUg==/com.sevtinge.hyperceiler-rItWGJpGdJsAxQQQwxP_Og==/base.apk
+}
+3 {
+   module_pkg_name=io.github.proify.lyricon.cmprovider
+   apk_path=/data/app/~~Bc-Ji8A18El0AX3p1CxvSg==/io.github.proify.lyricon.cmprovider-fd-7L3sBsduUg8cslLwOyQ==/base.apk
+}
+4 {
+   module_pkg_name=io.github.proify.lyricon.core
+   apk_path=/data/app/~~QDqQ9QNK00i5eAuZlx1z3w==/io.github.proify.lyricon.core-4ln5Vm89Dqfd-JwTM4ENtQ==/base.apk
+}
+5 {
+   module_pkg_name=dev.lackluster.mihelper
+   apk_path=/data/app/~~j0H2s-xJ6Gd7uoRExdCpaw==/dev.lackluster.mihelper-sEJawr4jVUu_bPY5T91a-Q==/base.apk
+}
+6 {
+   module_pkg_name=com.example.miuilight
+   apk_path=/data/app/~~COnl_4WtTMHkRP4B0gWIVw==/com.example.miuilight-DU3eynxzfY0k_N1P6K2oLg==/base.apk
+}
+<<<<<
