@@ -303,16 +303,6 @@ public class LightHook implements IXposedHookLoadPackage {
         }
     }
 
-    private static Context appContext() {
-        try {
-            return (Context) XposedHelpers.callStaticMethod(
-                XposedHelpers.findClass("android.app.ActivityThread", null),
-                "currentApplication");
-        } catch (Throwable t) {
-            return null;
-        }
-    }
-
     private static Context getSystemContext() {
         try {
             Class<?> atClass = XposedHelpers.findClass("android.app.ActivityThread", null);

@@ -256,35 +256,6 @@ fun HomePage(
         }
 
         Spacer(Modifier.height(10.dp))
-        SmallTitle("麦克风隐私灯")
-        Card(Modifier.fillMaxWidth()) {
-            SwitchPreference(
-                title = "麦克风隐私灯",
-                summary = "通过反射 AppOps 的 RECORD_AUDIO 检测麦克风占用，亮灯提示（关闭时完全不安装 hook，零开销）",
-                checked = s.micEnabled,
-                onCheckedChange = { vm.setMicEnabled(it) }
-            )
-            if (s.micEnabled) {
-                // hook modes: 0 原色 / 2 关闭 / 1 自定义颜色
-                val micIndex = when (s.micMode) { 2 -> 1; 1 -> 2; else -> 0 }
-                OverlayDropdownPreference(
-                    title = "麦克风灯表现",
-                    items = listOf("原色（绿）", "关闭", "自定义颜色"),
-                    selectedIndex = micIndex,
-                    onSelectedIndexChange = { vm.setMicOption(it) }
-                )
-                if (s.micMode == 1) {
-                    ArrowPreference(
-                        title = "自定义颜色",
-                        summary = "#%06X".format(s.micColor and 0xFFFFFF),
-                        onClick = { showMicColorDialog = true }
-                    )
-                }
-                InfoRow("生效提示", "启用后需重启（system_server 无法热重载），非系统作用域可重启作用域")
-            }
-        }
-
-        Spacer(Modifier.height(10.dp))
         SmallTitle("测试")
         Card(Modifier.fillMaxWidth()) {
             ArrowPreference(
