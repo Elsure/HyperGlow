@@ -247,11 +247,11 @@ fun AboutPage(
         }
 
         Spacer(Modifier.height(10.dp))
-        SmallTitle("构建信息")
+        SmallTitle("适用设备")
         Card(Modifier.fillMaxWidth()) {
-            InfoRow("作者", "Elsure")
-            InfoRow("联系方式", "Mitakee410@gmail.com")
-            InfoRow("引用项目", "MIUIX & LSPosed & Magisk")
+            InfoRow("机型", "小米平板 8 Pro（piano）")
+            InfoRow("系统", "HyperOS")
+            InfoRow("依赖", "LSPosed + KernelSU / Magisk")
         }
         Spacer(Modifier.height(28.dp))
     }

@@ -122,6 +122,7 @@ fun NotificationPage(
 ) {
     val s by vm.ui.collectAsState()
     val ctx = LocalContext.current
+    val configuration = LocalConfiguration.current
     var editing by remember { mutableStateOf<NotifStore.Rule?>(null) }
     var filter by remember { mutableStateOf("") }
 
@@ -129,6 +130,7 @@ fun NotificationPage(
 
     val scroll = Modifier
         .fillMaxSize()
+        .heightIn(min = configuration.screenHeightDp.dp)
         .let { if (scrollBehavior != null) it.nestedScroll(scrollBehavior) else it }
         .padding(contentPadding)
         .verticalScroll(rememberScrollState())

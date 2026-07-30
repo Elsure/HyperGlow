@@ -272,6 +272,18 @@ public class LightHook implements IXposedHookLoadPackage {
         }
     }
 
+    private static Class<?> findProxy(ClassLoader cl) {
+        try {
+            return XposedHelpers.findClass(PROXY, cl);
+        } catch (Throwable t) {
+            try {
+                return XposedHelpers.findClass(PROXY, ClassLoader.getSystemClassLoader());
+            } catch (Throwable t2) {
+                return null;
+            }
+        }
+    }
+
     private static void hook(Class<?> clazz, String method, Class<?>[] types, XC_MethodHook cb) {
         try {
             Object[] params = new Object[types.length + 1];
@@ -310,18 +322,6 @@ public class LightHook implements IXposedHookLoadPackage {
             return (Context) XposedHelpers.callMethod(at, "getSystemContext");
         } catch (Throwable t) {
             return null;
-        }
-    }
-
-    private static Class<?> findProxy(ClassLoader cl) {
-        try {
-            return XposedHelpers.findClass(PROXY, cl);
-        } catch (Throwable t) {
-            try {
-                return XposedHelpers.findClass(PROXY, ClassLoader.getSystemClassLoader());
-            } catch (Throwable t2) {
-                return null;
-            }
         }
     }
 }
