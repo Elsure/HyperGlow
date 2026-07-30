@@ -19,8 +19,22 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // CI signing: set KEYSTORE_PASSWORD / KEY_ALIAS / KEY_PASSWORD env vars + place release.keystore at project root.
+    val ciSign = System.getenv("KEYSTORE_PASSWORD") != null
+    if (ciSign) {
+        signingConfigs {
+            create("release") {
+                storeFile = file("../release.keystore")
+                storePassword = System.getenv("KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("KEY_ALIAS")
+                keyPassword = System.getenv("KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
+            if (ciSign) signingConfig = signingConfigs.getByName("release")
             // R8 on. The Xposed entry class is loaded BY NAME from assets/xposed_init, so the keep
             // rules in src/main/keepRules/rules.keep are what stop it being renamed or stripped —
             // if that ever breaks, the module installs fine but silently never hooks anything.

@@ -34,9 +34,6 @@ data class UiState(
     val privMode: Int = 0,          // 0 原色(stock) / 1 自定义颜色 / 2 关闭(hide)
     val privEnabled: Boolean = false,
     val privColor: Int = 0xFF00FF00.toInt(),
-    val micEnabled: Boolean = false,    // 麦克风隐私灯总开关（关闭时 hook 完全不安装）
-    val micMode: Int = 0,              // 0 原色 / 1 自定义颜色 / 2 关闭(hide)
-    val micColor: Int = 0xFF00FF00.toInt(),
     val monitoring: Boolean = false,
     val eventLog: List<String> = emptyList(),
     val lastAction: String = "",
@@ -77,8 +74,6 @@ class Prefs(context: Context) {
         activePkg = sp.getString("pkg", state.activePkg) ?: state.activePkg,
         privEnabled = sp.getBoolean("privEnabled", state.privEnabled),
         privColor = sp.getInt("privColor", state.privColor),
-        micEnabled = sp.getBoolean("micEnabled", state.micEnabled),
-        micColor = sp.getInt("micColor", state.micColor),
         spectrumPlayback = sp.getBoolean("spectrumPlayback", state.spectrumPlayback),
         themeMode = sp.getInt("themeMode", state.themeMode),
         dynamicColor = sp.getBoolean("dynamicColor", state.dynamicColor),
@@ -94,7 +89,6 @@ class Prefs(context: Context) {
         put("sensitivity", s.sensitivity.toDouble()); put("maxBright", s.maxBright.toDouble())
         put("pkg", s.activePkg)
         put("privEnabled", s.privEnabled); put("privMode", s.privMode); put("privColor", s.privColor)
-        put("micEnabled", s.micEnabled); put("micMode", s.micMode); put("micColor", s.micColor)
         put("spectrumPlayback", s.spectrumPlayback)
         put("themeMode", s.themeMode); put("dynamicColor", s.dynamicColor)
         put("pickerStyle", s.pickerStyle); put("globalMax", s.globalMax.toDouble())
@@ -116,9 +110,6 @@ class Prefs(context: Context) {
             privEnabled = o.optBoolean("privEnabled", base.privEnabled),
             privMode = o.optInt("privMode", base.privMode),
             privColor = o.optInt("privColor", base.privColor),
-            micEnabled = o.optBoolean("micEnabled", base.micEnabled),
-            micMode = o.optInt("micMode", base.micMode),
-            micColor = o.optInt("micColor", base.micColor),
             spectrumPlayback = o.optBoolean("spectrumPlayback", base.spectrumPlayback),
             themeMode = o.optInt("themeMode", base.themeMode),
             dynamicColor = o.optBoolean("dynamicColor", base.dynamicColor),
@@ -138,8 +129,6 @@ class Prefs(context: Context) {
             .putString("pkg", s.activePkg)
             .putBoolean("privEnabled", s.privEnabled)
             .putInt("privColor", s.privColor)
-            .putBoolean("micEnabled", s.micEnabled)
-            .putInt("micColor", s.micColor)
             .putBoolean("spectrumPlayback", s.spectrumPlayback)
             .putInt("themeMode", s.themeMode)
             .putBoolean("dynamicColor", s.dynamicColor)
@@ -178,9 +167,6 @@ class HyperGlowViewModel(app: Application) : AndroidViewModel(app) {
                     mode = LightController.mode(),
                     privMode = privMode,
                     privEnabled = it.privEnabled || privMode != 0,
-                    micEnabled = LightController.readMicEnabled() == 1,
-                    micMode = LightController.readMicMode(),
-                    micColor = LightController.readMicColor(),
                     rootStatus = if (LightController.rootReady) "已连接 (sysfs)" else "未连接",
                     takeover = LightController.takeoverActive,
                 )
@@ -454,26 +440,6 @@ class HyperGlowViewModel(app: Application) : AndroidViewModel(app) {
         persist()
     }
 
-    // ---- microphone privacy light (AppOps reflective detection) ----
-    fun setMicEnabled(on: Boolean) {
-        _ui.update { it.copy(micEnabled = on) }
-        viewModelScope.launch { io { LightController.setMicEnabled(on) } }
-        persist()
-    }
-
-    /** Sub-option index: 0 原色 / 1 关闭 / 2 自定义颜色 -> hook/mode 0 / 2 / 1 (mirrors privacy). */
-    fun setMicOption(index: Int) {
-        val mode = when (index) { 1 -> 2; 2 -> 1; else -> 0 }
-        _ui.update { it.copy(micMode = mode) }
-        viewModelScope.launch { io { LightController.setMicMode(mode) } }
-        persist()
-    }
-
-    fun setMicColor(color: Int) {
-        _ui.update { it.copy(micColor = color) }
-        viewModelScope.launch { io { LightController.setMicColor(color) } }
-        persist()
-    }
 
     // ---- notifications ----
 

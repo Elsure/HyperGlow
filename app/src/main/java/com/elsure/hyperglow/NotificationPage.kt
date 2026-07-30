@@ -130,10 +130,10 @@ fun NotificationPage(
 
     val scroll = Modifier
         .fillMaxSize()
-        .heightIn(min = configuration.screenHeightDp.dp)
         .let { if (scrollBehavior != null) it.nestedScroll(scrollBehavior) else it }
         .padding(contentPadding)
         .verticalScroll(rememberScrollState())
+        .heightIn(min = configuration.screenHeightDp.dp)
         .padding(horizontal = 16.dp)
 
     val app = openApp

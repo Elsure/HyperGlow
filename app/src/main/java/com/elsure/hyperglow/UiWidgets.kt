@@ -2,6 +2,8 @@ package com.elsure.hyperglow
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.content.pm.PackageManager
 import android.media.projection.MediaProjectionManager
 import androidx.activity.compose.BackHandler
@@ -197,12 +199,16 @@ fun SwipeActionChip(
 fun AboutPage(
     contentPadding: PaddingValues,
     scrollBehavior: androidx.compose.ui.input.nestedscroll.NestedScrollConnection? = null,
+    onOpenDetail: (String?) -> Unit = {},
 ) {
     val ctx = LocalContext.current
     val version = remember {
         runCatching {
             ctx.packageManager.getPackageInfo(ctx.packageName, 0).versionName ?: "-"
         }.getOrDefault("-")
+    }
+    fun openUrl(url: String) {
+        runCatching { ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) }
     }
 
     Column(
@@ -232,10 +238,21 @@ fun AboutPage(
         }
 
         Spacer(Modifier.height(10.dp))
-        SmallTitle("版本")
+        SmallTitle("构建信息")
         Card(Modifier.fillMaxWidth()) {
+            InfoRow("作者", "Elsure")
             InfoRow("版本号", version)
             InfoRow("包名", "com.elsure.hyperglow")
+            ArrowPreference(
+                title = "项目地址",
+                summary = "github.com/Elsure/HyperGlow",
+                onClick = { openUrl("https://github.com/Elsure/HyperGlow") }
+            )
+            ArrowPreference(
+                title = "开源引用",
+                summary = "查看本项目使用的所有开源库",
+                onClick = { onOpenDetail("references") }
+            )
         }
 
         Spacer(Modifier.height(10.dp))
@@ -246,12 +263,51 @@ fun AboutPage(
             InfoRow("Binder 通道", "无 Root 时经隐私灯接口点灯，会被相机生命周期覆盖")
         }
 
-        Spacer(Modifier.height(10.dp))
-        SmallTitle("适用设备")
+        Spacer(Modifier.height(28.dp))
+    }
+}
+
+/** 开源引用子页面：列出所有引用的项目、作者与链接。 */
+@Composable
+fun ReferencesPage(
+    contentPadding: PaddingValues,
+    scrollBehavior: androidx.compose.ui.input.nestedscroll.NestedScrollConnection? = null,
+) {
+    val ctx = LocalContext.current
+    fun openUrl(url: String) {
+        runCatching { ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) }
+    }
+    data class Ref(val name: String, val author: String, val desc: String, val url: String)
+    val refs = remember {
+        listOf(
+            Ref("LSPosed", "LSPosed Developers", "Xposed 框架，用于 Hook 系统隐私灯策略", "https://github.com/LSPosed/LSPosed"),
+            Ref("KernelSU", "tiann", "内核级 Root 方案", "https://github.com/tiann/KernelSU"),
+            Ref("Magisk", "topjohnwu", "系统级 Root 框架", "https://github.com/topjohnwu/Magisk"),
+            Ref("MiuixKMP", "compose-miuix-ui", "MIUI 风格 Compose Multiplatform UI 库", "https://github.com/compose-miuix-ui/miuix"),
+            Ref("Jetpack Compose", "Google / JetBrains", "Android 声明式 UI 框架", "https://developer.android.com/jetpack/compose"),
+            Ref("Kotlin", "JetBrains", "编程语言", "https://github.com/JetBrains/kotlin"),
+            Ref("XposedBridge API", "rovo89", "Xposed 桥接接口（编译期引用）", "https://github.com/rovo89/XposedBridge"),
+        )
+    }
+
+    Column(
+        Modifier
+            .fillMaxSize()
+            .let { if (scrollBehavior != null) it.nestedScroll(scrollBehavior) else it }
+            .padding(contentPadding)
+            .verticalScroll(rememberScrollState())
+            .padding(horizontal = 16.dp)
+    ) {
+        Spacer(Modifier.height(4.dp))
+        SmallTitle("开源引用")
         Card(Modifier.fillMaxWidth()) {
-            InfoRow("机型", "小米平板 8 Pro（piano）")
-            InfoRow("系统", "HyperOS")
-            InfoRow("依赖", "LSPosed + KernelSU / Magisk")
+            refs.forEach { ref ->
+                ArrowPreference(
+                    title = ref.name,
+                    summary = "${ref.author} · ${ref.desc}",
+                    onClick = { openUrl(ref.url) }
+                )
+            }
         }
         Spacer(Modifier.height(28.dp))
     }

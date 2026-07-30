@@ -125,7 +125,11 @@ fun SettingsPage(
     var restoreMsg by remember { mutableStateOf("") }
 
     if (detail == "about") {
-        AboutPage(contentPadding, scrollBehavior)
+        AboutPage(contentPadding, scrollBehavior, onOpenDetail)
+        return
+    }
+    if (detail == "references") {
+        ReferencesPage(contentPadding, scrollBehavior)
         return
     }
 

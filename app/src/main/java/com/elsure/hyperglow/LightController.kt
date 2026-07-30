@@ -441,33 +441,6 @@ object LightController {
     fun readPrivacyMode(): Int = root.getGlobal(K_PRIV_MODE, "0").toIntOrNull() ?: 0
     fun readPrivacyColor(): Int = root.getGlobal(K_PRIV_COLOR, "0").toIntOrNull() ?: 0
 
-    // ---- Microphone privacy-light (AppOps reflective detection) ----
-    // Enabling installs the AppOps hook in the next process load (reboot for system_server);
-    // disabling removes it entirely so there is ZERO AppOps overhead. The hook only reads these
-    // keys and publishes miuilight_mic_active; the LED half is handled by the shared privacy path.
-    private const val K_MIC_ENABLED = "miuilight_mic_enabled"
-    private const val K_MIC_MODE = "miuilight_mic_mode"
-    private const val K_MIC_COLOR = "miuilight_mic_color"
-
-    fun setMicEnabled(on: Boolean): Boolean {
-        val ok = root.putGlobal(K_MIC_ENABLED, if (on) "1" else "0")
-        EventProvider.refreshPrivacyOverride()
-        return ok
-    }
-    fun setMicMode(mode: Int): Boolean {
-        val ok = root.putGlobal(K_MIC_MODE, mode.toString())
-        EventProvider.refreshPrivacyOverride()
-        return ok
-    }
-    fun setMicColor(color: Int): Boolean {
-        val ok = root.putGlobal(K_MIC_COLOR, color.toString())
-        EventProvider.refreshPrivacyOverride()
-        return ok
-    }
-    fun readMicEnabled(): Int = root.getGlobal(K_MIC_ENABLED, "0").toIntOrNull() ?: 0
-    fun readMicMode(): Int = root.getGlobal(K_MIC_MODE, "0").toIntOrNull() ?: 0
-    fun readMicColor(): Int = root.getGlobal(K_MIC_COLOR, "0").toIntOrNull() ?: 0
-
     // ---- Event monitoring (hook -> EventProvider binder IPC; Settings.Global is a fallback) ----
 
     fun readEventSeq(): Int {
