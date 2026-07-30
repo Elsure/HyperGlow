@@ -10,7 +10,7 @@ sed -i '/^    buildTypes {/i\
             keyPassword System.getenv("KEY_PASSWORD")\
         }\
     }' app/build.gradle.kts
-sed -i '/^                enable = false$/{
+sed -i '/^                enable = true$/{
     a\            signingConfig signingConfigs.release
 }' app/build.gradle.kts
 echo "Signing config injected successfully"
