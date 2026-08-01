@@ -15,10 +15,20 @@ class HyperGlowNotificationListener : NotificationListenerService() {
 
     /** Keys of notifications currently holding a persistent (duration=0) light effect. */
     private val persistentKeys = mutableSetOf<String>()
+    private var connectedAt = 0L
+    private val recentKeys = mutableMapOf<String, Long>()
 
     override fun onNotificationPosted(sbn: StatusBarNotification?) {
         val n = sbn ?: return
         if (n.packageName == packageName) return
+        if (n.postTime < connectedAt - 1000) return
+        if ((n.notification?.flags ?: 0) and android.app.Notification.FLAG_FOREGROUND_SERVICE != 0) return
+
+        val now = System.currentTimeMillis()
+        val last = recentKeys[n.key] ?: 0L
+        if (now - last < 3000) return
+        recentKeys[n.key] = now
+        if (recentKeys.size > 64) recentKeys.clear()
 
         val channel = n.notification?.channelId ?: NotifStore.ANY_CHANNEL
         NotifStore.recordSeen(this, n.packageName, channel)
@@ -41,6 +51,7 @@ class HyperGlowNotificationListener : NotificationListenerService() {
     }
 
     override fun onListenerConnected() {
+        connectedAt = System.currentTimeMillis()
         Log.i(TAG, "notification listener connected")
     }
 

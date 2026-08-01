@@ -101,12 +101,12 @@ class EventProvider : ContentProvider() {
             val mode = try { Settings.Global.getInt(cr, K_PRIV_MODE, 0) } catch (e: Exception) { 0 }
             val override = when {
                 !privacyActive -> "0,0,0,0"
+                mode == 2 -> "2,0,0,0"
                 mode == 1 -> {
                     val pc = try { Settings.Global.getInt(cr, K_PRIV_COLOR, 0) } catch (e: Exception) { 0 }
-                    "1,${(pc shr 16) and 0xFF},${(pc shr 8) and 0xFF},${pc and 0xFF}"
+                    if (pc == 0) "1,0,255,0" else "1,${(pc shr 16) and 0xFF},${(pc shr 8) and 0xFF},${pc and 0xFF}"
                 }
-                mode == 2 -> "2,0,0,0"
-                else -> "0,0,0,0"
+                else -> "1,0,255,0"
             }
             val cmd = "mkdir -p $PRIV_DIR && echo '$override' > $PRIV_FILE.tmp && mv $PRIV_FILE.tmp $PRIV_FILE"
             // Shared long-lived root shell (RootSession): a ~1ms pipe write instead of spawning a su process,
