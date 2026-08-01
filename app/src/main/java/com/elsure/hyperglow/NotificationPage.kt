@@ -125,8 +125,12 @@ fun NotificationPage(
     val configuration = LocalConfiguration.current
     var editing by remember { mutableStateOf<NotifStore.Rule?>(null) }
     var filter by remember { mutableStateOf("") }
+    val selectedKeys = remember { mutableStateListOf<String>() }
+    val selectionMode = selectedKeys.isNotEmpty()
+    var revealedKey by remember { mutableStateOf("") }
 
     LaunchedEffect(Unit) { vm.refreshNotif() }
+    BackHandler(enabled = selectionMode) { selectedKeys.clear() }
 
     val scroll = Modifier
         .fillMaxSize()
@@ -202,20 +206,49 @@ fun NotificationPage(
             }
 
             Spacer(Modifier.height(10.dp))
+            if (selectionMode) {
+                Card(Modifier.fillMaxWidth()) {
+                    Row(
+                        Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            "已选 ${selectedKeys.size} 项",
+                            color = MiuixTheme.colorScheme.onSurface,
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                        Spacer(Modifier.weight(1f))
+                        TextButton(
+                            text = "全选",
+                            onClick = {
+                                selectedKeys.clear()
+                                selectedKeys.addAll(s.notifRules.map { it.pkg + "|" + it.channelId })
+                            }
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        TextButton(
+                            text = "删除",
+                            onClick = {
+                                selectedKeys.forEach { k ->
+                                    val parts = k.split("|", limit = 2)
+                                    vm.deleteNotifRule(parts[0], parts.getOrElse(1) { "" })
+                                }
+                                selectedKeys.clear()
+                            },
+                            colors = ButtonDefaults.textButtonColorsPrimary()
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        TextButton(text = "取消", onClick = { selectedKeys.clear() })
+                    }
+                }
+                Spacer(Modifier.height(10.dp))
+            }
+
             SmallTitle("已配置的规则")
             Card(Modifier.fillMaxWidth()) {
                 if (s.notifRules.isEmpty()) {
                     InfoRow("暂无规则", "在下方选择应用后添加")
-                } else {
-                    s.notifRules.forEach { r ->
-                        SwitchPreference(
-                            title = NotifStore.appLabel(ctx, r.pkg),
-                            summary = "${if (r.channelId.isEmpty()) "全部类别" else r.channelId} · " +
-                                    "${NotifStore.effectName(r.effect)} · ${if (r.durationSec > 0) "${r.durationSec}秒" else "常亮"}",
-                            checked = r.enabled,
-                            onCheckedChange = { vm.saveNotifRule(r.copy(enabled = it)) }
-                        )
-                    }
                 }
                 ArrowPreference(
                     title = "通用规则",
@@ -225,6 +258,71 @@ fun NotificationPage(
                             ?: NotifStore.Rule(pkg = NotifStore.ANY_APP)
                     }
                 )
+            }
+            if (s.notifRules.isNotEmpty()) {
+                val cs = MiuixTheme.colorScheme
+                Spacer(Modifier.height(6.dp))
+                s.notifRules.forEach { r ->
+                    val rk = r.pkg + "|" + r.channelId
+                    SwipeActionRow(
+                        revealed = revealedKey == rk,
+                        onRevealChange = { revealedKey = if (it) rk else "" },
+                        selectionMode = selectionMode,
+                        onClick = {
+                            when {
+                                selectionMode ->
+                                    if (selectedKeys.contains(rk)) selectedKeys.remove(rk)
+                                    else selectedKeys.add(rk)
+                                revealedKey == rk -> revealedKey = ""
+                                else -> editing = r
+                            }
+                        },
+                        onLongClick = {
+                            revealedKey = ""
+                            if (!selectedKeys.contains(rk)) selectedKeys.add(rk)
+                        },
+                        actions = {
+                            SwipeActionChip(
+                                icon = Icons.Rounded.Info,
+                                label = "详情",
+                                container = cs.primary.copy(alpha = 0.16f),
+                                contentColor = cs.primary,
+                                onClick = { revealedKey = ""; editing = r }
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            SwipeActionChip(
+                                icon = Icons.Rounded.Delete,
+                                label = "删除",
+                                container = Color(0xFFE04A4A),
+                                contentColor = Color.White,
+                                onClick = { revealedKey = ""; vm.deleteNotifRule(r.pkg, r.channelId) }
+                            )
+                            Spacer(Modifier.width(12.dp))
+                        }
+                    ) {
+                        Card(
+                            Modifier.fillMaxWidth(),
+                            insideMargin = PaddingValues(0.dp)
+                        ) {
+                            Row(
+                                Modifier
+                                    .fillMaxWidth()
+                                    .background(
+                                        if (selectedKeys.contains(rk))
+                                            cs.primary.copy(alpha = 0.14f) else Color.Transparent
+                                    )
+                            ) {
+                                SwitchPreference(
+                                    title = NotifStore.appLabel(ctx, r.pkg),
+                                    summary = "${if (r.channelId.isEmpty()) "全部类别" else r.channelId} · " +
+                                            "${NotifStore.effectName(r.effect)} · ${if (r.durationSec > 0) "${r.durationSec}秒" else "常亮"}",
+                                    checked = r.enabled,
+                                    onCheckedChange = { vm.saveNotifRule(r.copy(enabled = it)) }
+                                )
+                            }
+                        }
+                    }
+                }
             }
 
             Spacer(Modifier.height(10.dp))
