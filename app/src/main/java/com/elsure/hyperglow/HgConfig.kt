@@ -13,6 +13,10 @@ object HgConfig {
     const val LED_GREEN = "/sys/class/leds/green/brightness"
     const val LED_BLUE = "/sys/class/leds/blue/brightness"
 
+    // Flashlight / torch LED (PM8550): switch enables power rail, torch_0 sets intensity 0..150.
+    const val LED_SWITCH = "/sys/class/leds/led:switch_2/brightness"
+    const val LED_TORCH = "/sys/class/leds/led:torch_0/brightness"
+
     // MIUI privacy-light binder path — transact codes & descriptors are version-fragile.
     const val NOTIF_DESCRIPTOR = "android.app.INotificationManager"
     const val TX_GET_COLOR_LIGHT_MANAGER = 163      // INotificationManager.getColorLightManager

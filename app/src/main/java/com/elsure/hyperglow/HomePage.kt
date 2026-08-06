@@ -111,6 +111,7 @@ import top.yukonga.miuix.kmp.preference.SwitchPreference
 import top.yukonga.miuix.kmp.theme.ColorSchemeMode
 import top.yukonga.miuix.kmp.theme.MiuixTheme
 import top.yukonga.miuix.kmp.theme.ThemeController
+import top.yukonga.miuix.kmp.basic.Slider
 
 @Composable
 fun HomePage(
@@ -121,6 +122,7 @@ fun HomePage(
     val s by vm.ui.collectAsState()
     val cs = MiuixTheme.colorScheme
     val configuration = LocalConfiguration.current
+    val ctx = LocalContext.current
     var showColorDialog by remember { mutableStateOf(false) }
     ColorPickerDialog(
         show = showColorDialog,
@@ -247,6 +249,43 @@ fun HomePage(
         }
 
         Spacer(Modifier.height(10.dp))
+        SmallTitle("闪光灯调节")
+        Card(Modifier.fillMaxWidth()) {
+            var torchOn by remember { mutableStateOf(false) }
+            var torchLevel by remember { mutableFloatStateOf(3f) }
+            SwitchPreference(
+                title = "闪光灯",
+                summary = if (torchOn) "已开启 · ${torchLevel.toInt()} 档" else "已关闭",
+                checked = torchOn,
+                onCheckedChange = { on ->
+                    torchOn = on
+                    ctx.getSharedPreferences("hyperglow", 0).edit().putInt("torchLevel", torchLevel.toInt()).apply()
+                    vm.setTorch(on, (torchLevel.toInt() * 20).coerceAtMost(100))
+                }
+            )
+            if (torchOn) {
+                Column(Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
+                    Text(
+                        "亮度 · ${torchLevel.toInt()} 档",
+                        color = MiuixTheme.colorScheme.onSurface,
+                        fontSize = 14.sp
+                    )
+                    Spacer(Modifier.height(4.dp))
+                    Slider(
+                        value = torchLevel,
+                        onValueChange = { v ->
+                            torchLevel = v
+                            vm.setTorchBrightness((v.toInt() * 20).coerceAtMost(100))
+                        },
+                        valueRange = 1f..5f,
+                        
+                        showKeyPoints = true,
+                        keyPoints = listOf(1f, 2f, 3f, 4f, 5f)
+                    )
+                }
+            }
+        }
+        Spacer(Modifier.height(10.dp))
         SmallTitle("测试")
         Card(Modifier.fillMaxWidth()) {
             ArrowPreference(
@@ -256,6 +295,7 @@ fun HomePage(
             )
             ArrowPreference(title = "关闭指示灯", onClick = { vm.turnOff() })
         }
+
         Spacer(Modifier.height(28.dp))
     }
 }

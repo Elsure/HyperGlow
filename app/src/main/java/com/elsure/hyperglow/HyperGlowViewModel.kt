@@ -242,6 +242,13 @@ class HyperGlowViewModel(app: Application) : AndroidViewModel(app) {
         persist()
     }
 
+    fun setTorch(enabled: Boolean, brightness: Int) {
+        viewModelScope.launch { io { LightController.setTorch(enabled, brightness) } }
+    }
+    fun setTorchBrightness(brightness: Int) {
+        viewModelScope.launch { io { LightController.setTorchBrightness(brightness) } }
+    }
+
     fun turnOff() {
         _ui.update { it.copy(spectrumOn = false, animMode = "none") }
         viewModelScope.launch { io { LightController.off() } }

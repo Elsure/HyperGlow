@@ -441,6 +441,26 @@ object LightController {
     fun readPrivacyMode(): Int = root.getGlobal(K_PRIV_MODE, "0").toIntOrNull() ?: 0
     fun readPrivacyColor(): Int = root.getGlobal(K_PRIV_COLOR, "0").toIntOrNull() ?: 0
 
+    // ---- Flashlight / torch LED (PM8550, two beads: switch_2 + torch_0) ----
+    private const val TORCH_SWITCH = HgConfig.LED_SWITCH
+    private const val TORCH_NODE = HgConfig.LED_TORCH
+
+    fun setTorch(enabled: Boolean, brightness: Int = 100): Boolean {
+        val b = brightness.coerceIn(0, 100)
+        val cmd = if (enabled) {
+            "echo 1 > $TORCH_SWITCH; echo $b > $TORCH_NODE"
+        } else {
+            "echo 0 > $TORCH_NODE; echo 0 > $TORCH_SWITCH; " +
+            "echo torch0_trigger > /sys/class/leds/led:torch_0/trigger; echo switch2_trigger > /sys/class/leds/led:switch_2/trigger"
+        }
+        return RootSession.write(cmd)
+    }
+
+    fun setTorchBrightness(brightness: Int): Boolean {
+        val b = brightness.coerceIn(0, 100)
+        return RootSession.write("echo $b > $TORCH_NODE")
+    }
+
     // ---- Event monitoring (hook -> EventProvider binder IPC; Settings.Global is a fallback) ----
 
     fun readEventSeq(): Int {
