@@ -58,13 +58,23 @@ class MiuiLightController {
             val data = Parcel.obtain(); val reply = Parcel.obtain()
             try {
                 data.writeInterfaceToken(NOTIF_DESCRIPTOR)
-                val ok = notifBinder.transact(TRANSACTION_GET_COLOR_LIGHT_MANAGER, data, reply, 0)
-                if (!ok) { statusText = "FAIL: transact 163 false"; return }
+                // Dynamically resolve transaction code from INotificationManager$Stub if possible
+                val txCode = try {
+                    val stubClass = Class.forName("android.app.INotificationManager\$Stub")
+                    val field = stubClass.getDeclaredField("TRANSACTION_getColorLightManager")
+                    field.isAccessible = true
+                    field.getInt(null)
+                } catch (_: Exception) {
+                    TRANSACTION_GET_COLOR_LIGHT_MANAGER
+                }
+                val ok = notifBinder.transact(txCode, data, reply, 0)
+                if (!ok) { statusText = "FAIL: transact $txCode false"; return }
                 reply.readException()
                 lightsBinder = reply.readStrongBinder()
                 statusText = if (lightsBinder != null)
                     "OK (${lightsBinder!!.interfaceDescriptor})"
                 else "FAIL: getColorLightManager null"
+                Log.i(TAG, "init result: $statusText")
             } finally { data.recycle(); reply.recycle() }
         } catch (e: Exception) {
             statusText = "FAIL: ${e.javaClass.simpleName}: ${e.message}"

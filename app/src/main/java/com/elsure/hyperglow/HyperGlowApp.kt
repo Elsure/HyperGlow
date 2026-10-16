@@ -211,6 +211,13 @@ fun HyperGlowApp(vm: HyperGlowViewModel) {
                                 }
                             },
                             actions = {
+                                IconButton(onClick = { vm.turnOff() }) {
+                                    Icon(
+                                        PowerIcon,
+                                        contentDescription = "关闭指示灯",
+                                        tint = MiuixTheme.colorScheme.onSurface
+                                    )
+                                }
                                 IconButton(onClick = { showRestartDialog = true }) {
                                     Icon(
                                         Icons.Rounded.Refresh,

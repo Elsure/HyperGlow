@@ -13,8 +13,8 @@ android {
         applicationId = "com.elsure.hyperglow"
         minSdk = 35
         targetSdk = 36
-        versionCode = 4
-        versionName = "1.2"
+        versionCode = 5
+        versionName = "1.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

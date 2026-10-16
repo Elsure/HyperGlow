@@ -50,10 +50,16 @@ class LightForegroundService : Service() {
     }
 
     private fun startInForeground(text: String, type: Int) {
+        val pi = android.app.PendingIntent.getActivity(
+            this, 0,
+            Intent(this, MainActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
+            android.app.PendingIntent.FLAG_UPDATE_CURRENT or android.app.PendingIntent.FLAG_IMMUTABLE
+        )
         val notif = Notification.Builder(this, CHANNEL)
             .setContentTitle("HyperGlow")
             .setContentText(text)
             .setSmallIcon(R.mipmap.ic_launcher)
+            .setContentIntent(pi)
             .setOngoing(true)
             .build()
         try {

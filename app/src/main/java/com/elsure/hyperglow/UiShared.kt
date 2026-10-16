@@ -79,7 +79,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalConfiguration
@@ -198,3 +200,32 @@ fun hsvToRgb(hue: Float, sat: Float): Int {
     val b = (((b1 + m) * 255f).toInt()).coerceIn(0, 255)
     return (0xFF shl 24) or (r shl 16) or (g shl 8) or b
 }
+
+private var _powerIcon: ImageVector? = null
+val PowerIcon: ImageVector
+    get() {
+        if (_powerIcon != null) return _powerIcon!!
+        _powerIcon = ImageVector.Builder("PowerSettingsNew", 24.dp, 24.dp, 24f, 24f).apply {
+            path(fill = SolidColor(Color.White)) {
+                moveTo(13f, 3f)
+                horizontalLineToRelative(-2f)
+                verticalLineToRelative(10f)
+                horizontalLineToRelative(2f)
+                verticalLineTo(3f)
+                close()
+                moveTo(17.83f, 5.17f)
+                lineToRelative(-1.42f, 1.42f)
+                curveTo(17.99f, 7.86f, 19f, 9.81f, 19f, 12f)
+                curveToRelative(0f, 3.87f, -3.13f, 7f, -7f, 7f)
+                reflectiveCurveToRelative(-7f, -3.13f, -7f, -7f)
+                curveToRelative(0f, -2.19f, 1.01f, -4.14f, 2.58f, -5.42f)
+                lineTo(6.16f, 5.16f)
+                curveTo(4.22f, 6.82f, 3f, 9.26f, 3f, 12f)
+                curveToRelative(0f, 4.97f, 4.03f, 9f, 9f, 9f)
+                reflectiveCurveToRelative(9f, -4.03f, 9f, -9f)
+                curveToRelative(0f, -2.74f, -1.22f, -5.18f, -3.17f, -6.83f)
+                close()
+            }
+        }.build()
+        return _powerIcon!!
+    }

@@ -50,6 +50,7 @@ while :; do
       case "$np" in
         ''|*[!0-9]*) : ;;
         *)
+          [ "$nm" != "$mode" ] && [ "$nm" = "2" ] && frame=12
           takeover=$nt; mode=$nm; cr=$nr; cg=$ng; cb=$nb; period=$np
           [ "$cr" -gt 255 ] 2>/dev/null && cr=255
           [ "$cg" -gt 255 ] 2>/dev/null && cg=255

@@ -285,16 +285,7 @@ fun HomePage(
                 }
             }
         }
-        Spacer(Modifier.height(10.dp))
-        SmallTitle("测试")
-        Card(Modifier.fillMaxWidth()) {
-            ArrowPreference(
-                title = "测试灯光",
-                summary = "白光2秒正弦呼吸灯",
-                onClick = { vm.testLight() }
-            )
-            ArrowPreference(title = "关闭指示灯", onClick = { vm.turnOff() })
-        }
+
 
         Spacer(Modifier.height(28.dp))
     }

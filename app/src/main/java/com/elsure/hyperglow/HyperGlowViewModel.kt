@@ -48,6 +48,7 @@ data class UiState(
     val predictiveBack: Boolean = true,
     val globalMax: Float = 100f,    // 全局亮度上限 %
     val notifAccess: Boolean = false,
+    val notifMode: Int = NotifStore.MODE_WHITELIST,
     val notifRules: List<NotifStore.Rule> = emptyList(),
     val notifSeen: List<NotifStore.Seen> = emptyList(),
     val notifChannels: Map<String, List<NotifStore.ChannelInfo>> = emptyMap(),
@@ -161,13 +162,18 @@ class HyperGlowViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             val status = io { LightController.getStatus() }
             val privMode = io { LightController.readPrivacyMode() }
+            val rootStatusStr = when {
+                LightController.takeoverActive -> "已连接 (完全接管)"
+                LightController.rootReady -> "已连接 (sysfs)"
+                else -> "未连接"
+            }
             _ui.update {
                 it.copy(
                     status = status,
                     mode = LightController.mode(),
                     privMode = privMode,
                     privEnabled = it.privEnabled || privMode != 0,
-                    rootStatus = if (LightController.rootReady) "已连接 (sysfs)" else "未连接",
+                    rootStatus = rootStatusStr,
                     takeover = LightController.takeoverActive,
                 )
             }
@@ -215,7 +221,16 @@ class HyperGlowViewModel(app: Application) : AndroidViewModel(app) {
         _ui.update { it.copy(takeover = enabled) }
         viewModelScope.launch {
             val ok = io { LightController.setTakeover(enabled) }
-            if (enabled && !ok) _ui.update { it.copy(takeover = false) }
+            _ui.update {
+                it.copy(
+                    takeover = if (enabled) ok else false,
+                    rootStatus = when {
+                        if (enabled) ok else false -> "已连接 (完全接管)"
+                        LightController.rootReady -> "已连接 (sysfs)"
+                        else -> "未连接"
+                    }
+                )
+            }
             refreshStatus()
         }
     }
@@ -463,10 +478,17 @@ class HyperGlowViewModel(app: Application) : AndroidViewModel(app) {
         _ui.update {
             it.copy(
                 notifAccess = enabled,
+                notifMode = NotifStore.getMode(ctx),
                 notifRules = NotifStore.rules(ctx),
                 notifSeen = NotifStore.seen(ctx),
             )
         }
+    }
+
+    fun setNotifMode(mode: Int) {
+        val ctx = getApplication<Application>()
+        NotifStore.setMode(ctx, mode)
+        _ui.update { it.copy(notifMode = mode) }
     }
 
     /**

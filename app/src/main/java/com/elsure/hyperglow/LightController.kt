@@ -254,12 +254,18 @@ object LightController {
                     pushDaemon()
                 }
                 root.setTakeover(true)   // flag consumed by the Xposed module
+                syncForeground()
                 ok
             }
         } else {
             takeoverActive = false
-            daemon.writeState(0, dMode, dR, dG, dB, dPeriod)  // release the LED
+            daemon.writeState(0, 0, 0, 0, 0, dPeriod)  // release the LED and set off
             root.setTakeover(false)
+            stopSpectrum()
+            stopAnimation()
+            root.off()
+            setTorch(false)
+            syncForeground()
             true
         }
     }
@@ -411,7 +417,16 @@ object LightController {
         projection = null
     }
 
-    private fun syncForeground() {
+    @Volatile
+    var notifListeningActive = false
+        private set
+
+    fun setNotificationListenerActive(active: Boolean) {
+        notifListeningActive = active
+        syncForeground()
+    }
+
+    fun syncForeground() {
         val ctx = appContext ?: return
         when {
             // The playback-capture spectrum already runs under the mediaProjection-typed service,
@@ -419,6 +434,8 @@ object LightController {
             spectrumActive && spectrumSource == SpectrumAnalyzer.Source.PLAYBACK -> Unit
             spectrumActive -> LightForegroundService.start(ctx, "音乐频谱同步中", true)
             animator != null -> LightForegroundService.start(ctx, "灯效动画运行中", false)
+            takeoverActive -> LightForegroundService.start(ctx, "完全接管运行中", false)
+            notifListeningActive -> LightForegroundService.start(ctx, "通知监听运行中", false)
             else -> LightForegroundService.stop(ctx)
         }
     }
@@ -503,7 +520,12 @@ object LightController {
         else -> "Binder/privacy"
     }
 
-    fun getStatus(): String = "${binder.statusText} | mode: ${mode()}"
+    fun getStatus(): String = when {
+        takeoverActive -> "守护进程已接管"
+        rootReady && root.ready -> "Root sysfs 直写"
+        binder.statusText.startsWith("OK") -> binder.statusText
+        else -> "免Root通道不可用 (需完全接管/Root)"
+    }
 
     fun diagnose(): String = binder.diagnose() +
             "mode: ${mode()}\n" +

@@ -1,10 +1,16 @@
 package com.elsure.hyperglow.hook;
 
 import android.content.ContentResolver;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.provider.Settings;
 import android.util.Log;
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
 
+import java.lang.reflect.Method;
 import java.util.Arrays;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
@@ -42,6 +48,8 @@ public class LightHook implements IXposedHookLoadPackage {
     private static final String PKG_SELF = "com.elsure.hyperglow";
     private static final String PKG_SYSTEM = "android";
     private static final String PKG_SECCENTER = "com.miui.securitycenter";
+    private static final String PKG_SYSTEMUI = "com.android.systemui";
+    private static final String PKG_SYSTEMUI_PLUGIN = "miui.systemui.plugin";
     private static final String PROXY = "miui.lights.ILightsManager$Stub$Proxy";
 
     private static final String K_TAKEOVER = "miuilight_takeover";
@@ -73,7 +81,134 @@ public class LightHook implements IXposedHookLoadPackage {
         ClassLoader cl = lpparam.classLoader;
         if (PKG_SYSTEM.equals(pkg)) hookSystemServer(cl);
         if (PKG_SECCENTER.equals(pkg)) hookSecurityCenterDirect(cl);
+        if (PKG_SYSTEMUI.equals(pkg)) hookSystemUi(cl);
+        if (PKG_SYSTEMUI_PLUGIN.equals(pkg)) hookSystemUiPlugin(cl);
         hookLightProxy(cl, pkg);
+    }
+
+    // ---- stock HyperOS flashlight tile: bypass IS_TABLET check on long-press ----
+    private void hookSystemUi(ClassLoader cl) {
+        log("loaded in com.android.systemui");
+
+        // 1. Hook getLongClickIntent on flashlight tile classes to bypass the IS_TABLET castration
+        String[] tileClasses = {
+                "com.android.systemui.qs.tiles.MiuiFlashlightTile",
+                "com.android.systemui.qs.tiles.FlashlightTileWithLevel",
+                "com.android.systemui.qs.tiles.FlashlightTile"
+        };
+        for (final String clsName : tileClasses) {
+            try {
+                Class<?> clazz = XposedHelpers.findClass(clsName, cl);
+                XposedHelpers.findAndHookMethod(clazz, "getLongClickIntent", new XC_MethodHook() {
+                    @Override
+                    protected void afterHookedMethod(MethodHookParam param) {
+                        if (param.getResult() == null) {
+                            Intent intent = new Intent("miui.systemui.action.ACTION_SHOW_FLASHLIGHT");
+                            intent.setPackage("miui.systemui.plugin");
+                            intent.putExtra("flashlight_enter_from", 0);
+                            param.setResult(intent);
+                            log("MiuiFlashlightTile getLongClickIntent bypass: returned ACTION_SHOW_FLASHLIGHT intent");
+                        }
+                    }
+                });
+                log("hooked " + clsName + ".getLongClickIntent");
+            } catch (Throwable t) {
+                log("failed to hook " + clsName + ".getLongClickIntent: " + t);
+            }
+        }
+
+        // 2. Fallback: Hook QSTileImpl.handleLongClick in case getLongClickIntent was overridden or failed
+        try {
+            Class<?> qsTileImpl = XposedHelpers.findClass("com.android.systemui.qs.tileimpl.QSTileImpl", cl);
+            for (Method m : qsTileImpl.getDeclaredMethods()) {
+                if ("handleLongClick".equals(m.getName())) {
+                    XposedBridge.hookMethod(m, new XC_MethodHook() {
+                        @Override
+                        protected void beforeHookedMethod(MethodHookParam param) {
+                            Object spec = null;
+                            try { spec = XposedHelpers.callMethod(param.thisObject, "getTileSpec"); }
+                            catch (Throwable ignored) {
+                                try { spec = XposedHelpers.getObjectField(param.thisObject, "mTileSpec"); }
+                                catch (Throwable ignoredAgain) {}
+                            }
+                            if (!"flashlight".equals(String.valueOf(spec))) return;
+                            log("handleLongClick invoked on flashlight tile");
+                        }
+                    });
+                }
+            }
+        } catch (Throwable t) {
+            log("failed to hook QSTileImpl.handleLongClick: " + t);
+        }
+    }
+
+    // ---- miui.systemui.plugin: allow MiFlashlightActivity to rotate freely in landscape ----
+    private void hookSystemUiPlugin(ClassLoader cl) {
+        log("loaded in miui.systemui.plugin");
+        try {
+            Class<?> actClass = XposedHelpers.findClass("miui.systemui.flashlight.MiFlashlightActivity", cl);
+
+            // 1. Override getTargetOrientation
+            try {
+                XposedHelpers.findAndHookMethod(actClass, "getTargetOrientation", new XC_MethodHook() {
+                    @Override
+                    protected void afterHookedMethod(MethodHookParam param) {
+                        param.setResult(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+                        log("MiFlashlightActivity.getTargetOrientation overridden to FULL_SENSOR");
+                    }
+                });
+            } catch (Throwable t) {
+                log("failed to hook getTargetOrientation: " + t);
+            }
+
+            // 2. Override applyTargetOrientation
+            try {
+                XposedHelpers.findAndHookMethod(actClass, "applyTargetOrientation", new XC_MethodHook() {
+                    @Override
+                    protected void beforeHookedMethod(MethodHookParam param) {
+                        Activity act = (Activity) param.thisObject;
+                        act.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+                        param.setResult(null);
+                        log("MiFlashlightActivity.applyTargetOrientation set FULL_SENSOR");
+                    }
+                });
+            } catch (Throwable t) {
+                log("failed to hook applyTargetOrientation: " + t);
+            }
+
+            // 3. Override setRequestedOrientation to prevent orientation being forced back to portrait
+            try {
+                XposedHelpers.findAndHookMethod(Activity.class, "setRequestedOrientation", int.class, new XC_MethodHook() {
+                    @Override
+                    protected void beforeHookedMethod(MethodHookParam param) {
+                        if (param.thisObject != null &&
+                                "miui.systemui.flashlight.MiFlashlightActivity".equals(param.thisObject.getClass().getName())) {
+                            param.args[0] = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR;
+                        }
+                    }
+                });
+                log("hooked Activity.setRequestedOrientation for MiFlashlightActivity");
+            } catch (Throwable t) {
+                log("failed to hook setRequestedOrientation: " + t);
+            }
+
+            // 4. In onCreate, ensure FULL_SENSOR is requested
+            try {
+                XposedHelpers.findAndHookMethod(actClass, "onCreate", Bundle.class, new XC_MethodHook() {
+                    @Override
+                    protected void afterHookedMethod(MethodHookParam param) {
+                        Activity act = (Activity) param.thisObject;
+                        act.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+                        log("MiFlashlightActivity.onCreate set FULL_SENSOR");
+                    }
+                });
+            } catch (Throwable t) {
+                log("failed to hook onCreate: " + t);
+            }
+
+        } catch (Throwable t) {
+            log("failed to find MiFlashlightActivity in plugin: " + t);
+        }
     }
 
     // ---- system_server (only effective on forks that hook system_server) ----

@@ -19,7 +19,7 @@ object HgConfig {
 
     // MIUI privacy-light binder path — transact codes & descriptors are version-fragile.
     const val NOTIF_DESCRIPTOR = "android.app.INotificationManager"
-    const val TX_GET_COLOR_LIGHT_MANAGER = 163      // INotificationManager.getColorLightManager
+    const val TX_GET_COLOR_LIGHT_MANAGER = 129      // INotificationManager.getColorLightManager (129 on HyperOS 4 / A15+, 163 on A14)
     const val LIGHTS_DESCRIPTOR = "miui.lights.ILightsManager"
     const val TX_SET_COLOR_COMMON = 2               // ILightsManager.setColorCommon
     const val STYLE_PRIVACY = 7                      // camera privacy-indicator channel

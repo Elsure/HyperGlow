@@ -20,6 +20,9 @@ object NotifStore {
     const val ANY_APP = "*"
     const val ANY_CHANNEL = ""
 
+    const val MODE_WHITELIST = 0  // 白名单模式：仅匹配已启用的规则亮灯
+    const val MODE_BLACKLIST = 1  // 黑名单模式：被禁用的规则不亮灯，其余按通用规则亮灯
+
     const val EFFECT_SOLID = 0
     const val EFFECT_BREATH = 1
     const val EFFECT_BLINK = 2
@@ -150,9 +153,16 @@ object NotifStore {
     private const val PREFS = "hyperglow_notif"
     private const val K_RULES = "rules"
     private const val K_SEEN = "seen"
+    private const val K_MODE = "mode"
     private const val MAX_SEEN = 200
 
     private fun sp(ctx: Context) = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+
+    fun getMode(ctx: Context): Int = sp(ctx).getInt(K_MODE, MODE_WHITELIST)
+
+    fun setMode(ctx: Context, mode: Int) {
+        sp(ctx).edit().putInt(K_MODE, mode).apply()
+    }
 
     // ---- rules ----
     fun rules(ctx: Context): List<Rule> = try {
@@ -194,12 +204,40 @@ object NotifStore {
         writeRules(ctx, rules(ctx).filterNot { it.pkg == pkg && it.channelId == channelId })
     }
 
-    /** Most specific matching rule, or null when nothing applies. */
+    /**
+     * Matching rule according to current notifMode:
+     * - In WHITELIST mode: Only explicit matching rules that are enabled can trigger.
+     *   If an explicit rule is disabled or not configured, it returns null (no light).
+     *   (If global rule '*' exists and is enabled, it acts as fallback for all unconfigured apps).
+     * - In BLACKLIST mode: If an explicit rule exists and enabled == false, it is blacklisted (returns null).
+     *   If an explicit rule exists and enabled == true, returns that rule.
+     *   If no rule exists for that app, falls back to global '*' rule (or default rule).
+     */
     fun match(ctx: Context, pkg: String, channelId: String): Rule? {
         val list = rules(ctx)
-        return list.firstOrNull { it.pkg == pkg && it.channelId == channelId }
+        val mode = getMode(ctx)
+        val exactRule = list.firstOrNull { it.pkg == pkg && it.channelId == channelId }
             ?: list.firstOrNull { it.pkg == pkg && it.channelId == ANY_CHANNEL }
-            ?: list.firstOrNull { it.pkg == ANY_APP }
+        val globalRule = list.firstOrNull { it.pkg == ANY_APP }
+
+        return if (mode == MODE_BLACKLIST) {
+            if (exactRule != null) {
+                // If explicitly disabled in rule list, it is blacklisted!
+                if (!exactRule.enabled) null else exactRule
+            } else {
+                // Not in rule list, falls back to global rule if enabled
+                if (globalRule != null && globalRule.enabled) globalRule
+                else Rule(pkg = pkg, channelId = channelId, enabled = true, color = 0xFF00A0FF.toInt(), effect = EFFECT_BREATH, durationSec = 5)
+            }
+        } else {
+            // WHITELIST mode:
+            // Must have an explicit enabled rule, or fallback to enabled global rule
+            if (exactRule != null) {
+                if (exactRule.enabled) exactRule else null
+            } else {
+                if (globalRule != null && globalRule.enabled) globalRule else null
+            }
+        }
     }
 
     // ---- observed (app, channel) catalogue ----

@@ -206,6 +206,21 @@ fun NotificationPage(
             }
 
             Spacer(Modifier.height(10.dp))
+            SmallTitle("匹配模式")
+            Card(Modifier.fillMaxWidth()) {
+                OverlayDropdownPreference(
+                    title = "工作模式",
+                    summary = if (s.notifMode == NotifStore.MODE_WHITELIST)
+                        "白名单模式：仅匹配规则列表中已启用的应用亮灯，未配置的不亮灯"
+                    else
+                        "黑名单模式：规则列表中被禁用的应用不亮灯，其余按通用规则亮灯",
+                    items = listOf("白名单模式", "黑名单模式"),
+                    selectedIndex = s.notifMode.coerceIn(0, 1),
+                    onSelectedIndexChange = { vm.setNotifMode(it) }
+                )
+            }
+
+            Spacer(Modifier.height(10.dp))
             if (selectionMode) {
                 Card(Modifier.fillMaxWidth()) {
                     Row(

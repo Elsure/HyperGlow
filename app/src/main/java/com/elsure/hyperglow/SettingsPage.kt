@@ -251,6 +251,11 @@ fun SettingsPage(
                 onCheckedChange = { vm.setMonitoring(it) }
             )
             ArrowPreference(title = "读取诊断信息", onClick = { vm.diagnose() })
+            ArrowPreference(
+                title = "测试灯光",
+                summary = "白光2秒正弦呼吸灯",
+                onClick = { vm.testLight() }
+            )
         }
         if (s.monitoring) {
             Spacer(Modifier.height(10.dp))
