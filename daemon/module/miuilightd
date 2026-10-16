@@ -62,7 +62,8 @@ while :; do
   fi
 
   if [ "$takeover" != "1" ]; then
-    # released: do not touch the LED, let the system control it
+    # released: ensure the LEDs are off once, then let the system control it
+    echo 0 > "$RED"; echo 0 > "$GRN"; echo 0 > "$BLU"
     frame=0
     sleep 1
     continue

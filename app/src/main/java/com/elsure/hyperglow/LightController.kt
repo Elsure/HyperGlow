@@ -258,13 +258,22 @@ object LightController {
                 ok
             }
         } else {
-            takeoverActive = false
-            daemon.writeState(0, 0, 0, 0, 0, dPeriod)  // release the LED and set off
-            root.setTakeover(false)
+            // 1. Turn off indicators while takeover is still active
             stopSpectrum()
             stopAnimation()
-            root.off()
             setTorch(false)
+            dMode = 0; dR = 0; dG = 0; dB = 0
+            daemon.writeState(1, 0, 0, 0, 0, dPeriod)
+            RootSession.write("echo 0 > ${HgConfig.LED_RED}; echo 0 > ${HgConfig.LED_GREEN}; echo 0 > ${HgConfig.LED_BLUE}")
+
+            // 2. Wait 300ms for hardware & daemon to settle
+            try { Thread.sleep(300) } catch (_: InterruptedException) {}
+
+            // 3. Release takeover
+            takeoverActive = false
+            daemon.writeState(0, 0, 0, 0, 0, dPeriod)  // release the LED
+            root.setTakeover(false)
+            RootSession.write("echo 0 > ${HgConfig.LED_RED}; echo 0 > ${HgConfig.LED_GREEN}; echo 0 > ${HgConfig.LED_BLUE}")
             syncForeground()
             true
         }
