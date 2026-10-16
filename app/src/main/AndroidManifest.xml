@@ -30,7 +30,7 @@
         <!-- Receives light events from the in-app Xposed module (hook -> binder IPC). -->
         <provider
             android:name=".EventProvider"
-            android:authorities="com.elsure.hyperglow.events"
+            android:authorities="io.github.elsure.hyperglow.events"
             android:exported="true" />
 
         <activity

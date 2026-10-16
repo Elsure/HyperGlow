@@ -13,7 +13,7 @@
 # ---- HyperGlow: Xposed/LSPosed module keep rules ----
 # The entry class is loaded BY NAME from assets/xposed_init and its callbacks are invoked
 # reflectively by LSPosed; R8 must never rename or strip the hook package.
--keep class com.elsure.hyperglow.hook.** { *; }
+-keep class io.github.elsure.hyperglow.hook.** { *; }
 # Xposed API is provided by the LSPosed runtime (compileOnly); don't warn on it.
 -keep class de.robv.android.xposed.** { *; }
 -dontwarn de.robv.android.xposed.**
@@ -24,12 +24,12 @@
 # --- entry points reached by name / by the system, not by our own code ---
 # Services and the provider are declared in the manifest (AGP keeps those), but spelling them out
 # keeps the intent explicit if the manifest is ever refactored.
--keep class com.elsure.hyperglow.HyperGlowNotificationListener { *; }
--keep class com.elsure.hyperglow.LightForegroundService { *; }
--keep class com.elsure.hyperglow.TriggerService { *; }
--keep class com.elsure.hyperglow.EventProvider { *; }
+-keep class io.github.elsure.hyperglow.HyperGlowNotificationListener { *; }
+-keep class io.github.elsure.hyperglow.LightForegroundService { *; }
+-keep class io.github.elsure.hyperglow.TriggerService { *; }
+-keep class io.github.elsure.hyperglow.EventProvider { *; }
 
 # LightHook reaches back into the app process through these; keep their shapes stable.
--keepclassmembers class com.elsure.hyperglow.LightController { public *; }
--keepclassmembers class com.elsure.hyperglow.NotifStore { public *; }
--keepclassmembers class com.elsure.hyperglow.TriggerStore { public *; }
+-keepclassmembers class io.github.elsure.hyperglow.LightController { public *; }
+-keepclassmembers class io.github.elsure.hyperglow.NotifStore { public *; }
+-keepclassmembers class io.github.elsure.hyperglow.TriggerStore { public *; }

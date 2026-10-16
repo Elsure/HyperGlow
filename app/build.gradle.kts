@@ -4,17 +4,17 @@ plugins {
 }
 
 android {
-    namespace = "com.elsure.hyperglow"
+    namespace = "io.github.elsure.hyperglow"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.elsure.hyperglow"
+        applicationId = "io.github.elsure.hyperglow"
         minSdk = 35
         targetSdk = 36
-        versionCode = 5
-        versionName = "1.3"
+        versionCode = 6
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
